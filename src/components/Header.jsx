@@ -3,13 +3,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
+  const isDesktop = useMediaQuery("(min-width: 960px)");
+
   return (
     <>
       <TopBar />
-      <DesktopSearchBar />
-      <DestopNavbar />
+      {isDesktop && (
+        <>
+          <DesktopSearchBar />
+          <DestopNavbar />
+        </>
+      )}
+      {!isDesktop && <MobileNavbar />}
     </>
   );
 }
@@ -43,7 +53,7 @@ const DesktopSearchBar = () => {
           </div>
           <div>
             <input
-              className="border-[1px] w-[531px] border-solid border-black py-2 px-4 rounded-full"
+              className="border-[1px] w-[531px] border-solid border-black py-2 px-4 rounded"
               placeholder="Search Aidurian"
               type="text"
             />
@@ -62,7 +72,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/"
-            ? "font-bold text-[#468448] cursor-default"
+            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/"}
@@ -72,7 +82,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/membership"
-            ? "font-bold text-[#468448] cursor-default"
+            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/membership"}
@@ -81,18 +91,8 @@ const DestopNavbar = () => {
       </Link>
       <Link
         className={`link ${
-          pathname === "/resources"
-            ? "font-bold text-[#468448] cursor-default"
-            : "hover:opacity-60 transition-all"
-        }`}
-        href={"/resources"}
-      >
-        Resources
-      </Link>
-      <Link
-        className={`link ${
           pathname === "/news"
-            ? "font-bold text-[#468448] cursor-default"
+            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/news"}
@@ -102,43 +102,168 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/event"
-            ? "font-bold text-[#468448] cursor-default"
+            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/event"}
       >
-        Event
+        Upcoming event
       </Link>
       <Link
         className={`link ${
-          pathname === "/about"
-            ? "font-bold text-[#468448] cursor-default"
+          pathname === "/get-involved"
+            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
-        href={"/about"}
+        href={"/get-involved"}
       >
-        About
-      </Link>
-      <Link
-        className={`link ${
-          pathname === "/business-solutions"
-            ? "font-bold text-[#468448] cursor-default"
-            : "hover:opacity-60 transition-all"
-        }`}
-        href={"/business-solutions"}
-      >
-        Business Solutions
+        Get involved
       </Link>
       <Link
         className={`link ${
           pathname === "/local-sites"
-            ? "font-bold text-[#468448] cursor-default"
+            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/local-sites"}
       >
         Local sites
       </Link>
+      <Link
+        className={`link ${
+          pathname === "/contact"
+            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+            : "hover:opacity-60 transition-all"
+        }`}
+        href={"/contact"}
+      >
+        Contact
+      </Link>
     </nav>
+  );
+};
+
+const MobileNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  return (
+    <div className="relative">
+      <div className="container">
+        <div className="flex justify-between items-center">
+          <Link href={"/"}>
+            <img src={"/images/aidurian-logo.png"} alt="aidurian-logo" />
+          </Link>
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? (
+              <X size={35} className="text-[#468448]" />
+            ) : (
+              <Menu size={35} className="text-[#468448]" />
+            )}
+          </button>
+        </div>
+      </div>
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } mobile-nav p-2 absolute w-full bg-white shadow-2xl`}
+      >
+        <div>
+          <input
+            className="border-[1px] w-full border-solid border-black py-1 px-4 rounded mb-4"
+            placeholder="Search Aidurian"
+            type="text"
+          />
+        </div>
+        <nav className="flex flex-col justify-center items-center gap-4 mb-4">
+          <Link
+            className={`link ${
+              pathname === "/"
+                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                : "hover:opacity-60 transition-all"
+            }`}
+            href={"/"}
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            className={`link ${
+              pathname === "/membership"
+                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                : "hover:opacity-60 transition-all"
+            }`}
+            href={"/membership"}
+            onClick={() => setIsOpen(false)}
+          >
+            Membership
+          </Link>
+          <Link
+            className={`link ${
+              pathname === "/news"
+                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                : "hover:opacity-60 transition-all"
+            }`}
+            href={"/news"}
+            onClick={() => setIsOpen(false)}
+          >
+            News
+          </Link>
+          <Link
+            className={`link ${
+              pathname === "/event"
+                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                : "hover:opacity-60 transition-all"
+            }`}
+            href={"/event"}
+            onClick={() => setIsOpen(false)}
+          >
+            Upcoming event
+          </Link>
+          <Link
+            className={`link ${
+              pathname === "/get-involved"
+                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                : "hover:opacity-60 transition-all"
+            }`}
+            href={"/get-involved"}
+            onClick={() => setIsOpen(false)}
+          >
+            Get involved
+          </Link>
+          <Link
+            className={`link ${
+              pathname === "/local-sites"
+                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                : "hover:opacity-60 transition-all"
+            }`}
+            href={"/local-sites"}
+            onClick={() => setIsOpen(false)}
+          >
+            Local sites
+          </Link>
+          <Link
+            className={`link ${
+              pathname === "/contact"
+                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                : "hover:opacity-60 transition-all"
+            }`}
+            href={"/contact"}
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
+        </nav>
+
+        <div className="flex items-center gap-2">
+          <button className="flex-1 text-white cursor-pointer border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#468448] shadow-md rounded whitespace-nowrap hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
+            Log in
+          </button>
+          <button className="flex-1 cursor-pointer border-[1px] border-solid py-[7px] pl-10 pr-[38px] bg-white shadow-md rounded hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };

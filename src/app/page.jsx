@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
+import Link from "next/link";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -24,7 +25,7 @@ export default function Home() {
 const TopBanner = () => {
   return (
     <div className="flex flex-row-reverse items-center bg-[#FFE281]">
-      <div className="relative min-h-[656px] w-1/2 flex-1">
+      <div className="relative hidden md:block min-h-[656px] w-1/2 flex-1">
         <Image
           src={"/images/top-banner.png"}
           alt="aidurian-top-banner"
@@ -32,7 +33,7 @@ const TopBanner = () => {
           sizes="100vw"
         />
       </div>
-      <div className="flex-1 pl-[400px]">
+      <div className="flex-1 md:pl-[400px] p-4 md:p-0">
         <h1 className="bg-[#FABF03] text-lg text-white px-5 rounded max-w-fit mb-2">
           Welcome to IDA
         </h1>
@@ -95,7 +96,7 @@ const GoalSection = () => {
             />
             <h1 className="text-xl text-white font-bold">OUR GOAL</h1>
           </div>
-          <p className="text-justify pr-20 pb-10 text-white">
+          <p className="text-justify pr-9 md:pr-20 pb-9 text-white">
             At the International Durian Association (IDA) our primary goal is to
             elevate the global recognition and appreciation of durian through
             innovative research, sustainable practices, and international
@@ -115,7 +116,7 @@ const GoalSection = () => {
             />
             <h1 className="text-xl text-white font-bold">OUR MISSION</h1>
           </div>
-          <p className="text-justify pr-20 pb-10 text-white">
+          <p className="text-justify pr-9 md:pr-20 pb-9 text-white">
             Our mission is to support and advance the durian industry by
             promoting best practices in cultivation, ensuring high standards in
             quality and safety, and advocating for sustainable and eco-friendl y
@@ -135,7 +136,7 @@ const GoalSection = () => {
             />
             <h1 className="text-xl text-white font-bold">OUR VISION</h1>
           </div>
-          <p className="text-justify pr-20 pb-10 text-white">
+          <p className="text-justify pr-9 md:pr-20 pb-9 text-white">
             Our vision is to become the premier global hub for durian innovation
             and excellence. We envision a future where durian is celebrated and
             enjoyed by people from all walks of life, where the industry thrives
@@ -164,13 +165,15 @@ const InformationSection = () => {
           professionals adapt, grow, and lead
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div className="flex items-center gap-5 rounded-lg shadow-md">
+          <Link
+            href={"/empowering-durian-professionals"}
+            className="flex items-center gap-5 rounded-lg shadow-md hover:opacity-80 transition-all"
+          >
             <div>
-              <Image
+              <img
                 src={"/images/info-1.png"}
                 alt="info-1"
-                height={104}
-                width={104}
+                className="min-w-24"
               />
             </div>
             <div>
@@ -178,14 +181,16 @@ const InformationSection = () => {
                 Empowering Durian Professionals
               </h1>
             </div>
-          </div>
-          <div className="flex items-center gap-5 rounded-lg shadow-md">
+          </Link>
+          <Link
+            href={"/leading-the-future-of-durian-cultivation"}
+            className="flex items-center gap-5 rounded-lg shadow-md hover:opacity-80 transition-all"
+          >
             <div>
-              <Image
+              <img
                 src={"/images/info-3.png"}
                 alt="info-3"
-                height={104}
-                width={104}
+                className="min-w-24"
               />
             </div>
             <div>
@@ -193,14 +198,16 @@ const InformationSection = () => {
                 Leading the Future of Durian Cultivation
               </h1>
             </div>
-          </div>
-          <div className="flex items-center gap-5 rounded-lg shadow-md">
+          </Link>
+          <Link
+            href={"/driving-change-in-the-durian-industry"}
+            className="flex items-center gap-5 rounded-lg shadow-md hover:opacity-80 transition-all"
+          >
             <div>
-              <Image
+              <img
                 src={"/images/info-2.png"}
                 alt="info-2"
-                height={104}
-                width={104}
+                className="min-w-24"
               />
             </div>
             <div>
@@ -208,14 +215,16 @@ const InformationSection = () => {
                 Driving Change in the Durian Industry
               </h1>
             </div>
-          </div>
-          <div className="flex items-center gap-5 rounded-lg shadow-md">
+          </Link>
+          <Link
+            href={"/adapting-to-a-dynamic-market"}
+            className="flex items-center gap-5 rounded-lg shadow-md hover:opacity-80 transition-all"
+          >
             <div>
-              <Image
+              <img
                 src={"/images/info-4.png"}
                 alt="info-4"
-                height={104}
-                width={104}
+                className="min-w-24"
               />
             </div>
             <div>
@@ -223,7 +232,7 @@ const InformationSection = () => {
                 Adapting to a Dynamic Market
               </h1>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
@@ -244,7 +253,7 @@ const BecomeAMember = () => {
         style={{ backgroundColor: "rgba(255,255,255,0.9)" }}
       >
         <h1
-          className={`${playfairDisplay.className} font-medium text-5xl leading-tight mb-5`}
+          className={`${playfairDisplay.className} font-medium text-3xl md:text-5xl leading-tight mb-5`}
         >
           Become a part of a dynamic community dedicated to advancing the durian
           industry.
@@ -339,7 +348,7 @@ const ExploreTheReport = () => {
         style={{ backgroundColor: "rgba(255,255,255,0.9)" }}
       >
         <h1
-          className={`${playfairDisplay.className} font-medium text-5xl leading-tight mb-5`}
+          className={`${playfairDisplay.className} font-medium text-3xl md:text-5xl leading-tight mb-5`}
         >
           Innovation, excellence, and community – these are the pillars that
           drive IDA
@@ -375,27 +384,42 @@ const ExploreSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8">
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/users.svg"} alt="" />
-              <h1 className="text-3xl text-white">About IDA</h1>
+              <Link className="text-3xl text-white underline" href={"/about-us"}>
+                About IDA
+              </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/hard-drive.svg"} alt="" />
-              <h1 className="text-3xl text-white">Resources & Services</h1>
+              <Link
+                className="text-3xl text-white underline"
+                href={"/resources-and-services"}
+              >
+                Resources & Services
+              </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/sliders.svg"} alt="" />
-              <h1 className="text-3xl text-white">Quality control</h1>
+              <Link className="text-3xl text-white underline" href={"/quality-control"}>
+                Quality control
+              </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/user-check.svg"} alt="" />
-              <h1 className="text-3xl text-white">IDA partners</h1>
+              <Link className="text-3xl text-white underline" href={"/ida-partners"}>
+                IDA partners
+              </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/user-plus.svg"} alt="" />
-              <h1 className="text-3xl text-white">Membership</h1>
+              <Link className="text-3xl text-white underline" href={"/membership"}>
+                Membership
+              </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/share-2.svg"} alt="" />
-              <h1 className="text-3xl text-white">Network</h1>
+              <Link className="text-3xl text-white underline" href={"/network"}>
+                Network
+              </Link>
             </div>
           </div>
         </div>

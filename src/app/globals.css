@@ -40,3 +40,10 @@ body {
     rgba(194, 208, 63, 1) 100%
   );
 }
+
+.feature-block {
+  background: url("./../../public/images/feature-section-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
