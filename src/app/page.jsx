@@ -166,7 +166,7 @@ const InformationSection = () => {
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <Link
-            href={"/empowering-durian-professionals"}
+            href={"/feature/empowering-durian-professionals"}
             className="flex items-center gap-5 rounded-lg shadow-md hover:opacity-80 transition-all"
           >
             <div>
@@ -183,7 +183,7 @@ const InformationSection = () => {
             </div>
           </Link>
           <Link
-            href={"/leading-the-future-of-durian-cultivation"}
+            href={"/feature/leading-the-future-of-durian-cultivation"}
             className="flex items-center gap-5 rounded-lg shadow-md hover:opacity-80 transition-all"
           >
             <div>
@@ -200,7 +200,7 @@ const InformationSection = () => {
             </div>
           </Link>
           <Link
-            href={"/driving-change-in-the-durian-industry"}
+            href={"/feature/driving-change-in-the-durian-industry"}
             className="flex items-center gap-5 rounded-lg shadow-md hover:opacity-80 transition-all"
           >
             <div>
@@ -217,7 +217,7 @@ const InformationSection = () => {
             </div>
           </Link>
           <Link
-            href={"/adapting-to-a-dynamic-market"}
+            href={"/feature/adapting-to-a-dynamic-market"}
             className="flex items-center gap-5 rounded-lg shadow-md hover:opacity-80 transition-all"
           >
             <div>
@@ -384,7 +384,7 @@ const ExploreSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8">
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/users.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/about-us"}>
+              <Link className="text-3xl text-white underline" href={"/feature/about-us"}>
                 About IDA
               </Link>
             </div>
@@ -392,32 +392,32 @@ const ExploreSection = () => {
               <img src={"/icon/hard-drive.svg"} alt="" />
               <Link
                 className="text-3xl text-white underline"
-                href={"/resources-and-services"}
+                href={"/feature/resources-and-services"}
               >
                 Resources & Services
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/sliders.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/quality-control"}>
+              <Link className="text-3xl text-white underline" href={"/feature/quality-control"}>
                 Quality control
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/user-check.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/ida-partners"}>
+              <Link className="text-3xl text-white underline" href={"/feature/ida-partners"}>
                 IDA partners
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/user-plus.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/membership"}>
+              <Link className="text-3xl text-white underline" href={"/feature/membership"}>
                 Membership
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/share-2.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/network"}>
+              <Link className="text-3xl text-white underline" href={"/feature/network"}>
                 Network
               </Link>
             </div>

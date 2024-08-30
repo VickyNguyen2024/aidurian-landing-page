@@ -6,6 +6,15 @@ import { usePathname } from "next/navigation";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectGroup,
+  SelectLabel,
+  SelectItem,
+} from "@/components/ui/select";
 
 export default function Header() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
@@ -25,7 +34,25 @@ export default function Header() {
 }
 
 const TopBar = () => {
-  return <div className="h-[40px] bg-[#468448]" />;
+  return (
+    <div className="h-[40px] bg-[#468448] flex flex-row-reverse items-center">
+      <div className="container">
+        <div className="flex flex-row-reverse items-center">
+          <Select>
+            <SelectTrigger className="w-[100px] h-[30px] outline-none">
+              <SelectValue placeholder="English" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="apple">English</SelectItem>
+                <SelectItem value="chinese">中国</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 const DesktopSearchBar = () => {
@@ -101,11 +128,11 @@ const DestopNavbar = () => {
       </Link>
       <Link
         className={`link ${
-          pathname === "/event"
+          pathname === "/upcoming-event"
             ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
-        href={"/event"}
+        href={"/upcoming-event"}
       >
         Upcoming event
       </Link>
@@ -211,11 +238,11 @@ const MobileNavbar = () => {
           </Link>
           <Link
             className={`link ${
-              pathname === "/event"
+              pathname === "/upcoming-event"
                 ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
                 : "hover:opacity-60 transition-all"
             }`}
-            href={"/event"}
+            href={"/upcoming-event"}
             onClick={() => setIsOpen(false)}
           >
             Upcoming event

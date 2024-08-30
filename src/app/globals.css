@@ -47,3 +47,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.section-block-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

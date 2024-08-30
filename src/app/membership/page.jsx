@@ -1,63 +1,84 @@
-const MembershipData = [
-  {
-    title: "Membership",
-    content: [
-      "Joining the International Durian Association (IDA) means becoming part of a global community dedicated to the growth, innovation, and excellence of the durian industry.",
-      "Our members are at the heart of everything we do, and we strive to provide them with the tools, resources, and opportunities they need to succeed in a competitive market.",
-    ],
+const membershipData = {
+  title: "Membership",
+  subtitle:
+    "Are you passionate about durians and eager to connect with a global community of like-minded individuals?",
+  highlight: "JOIN US AND ENJOY EXCLUSIVE BENEFITS!",
+  image: {
+    url: "/images/membership-2.png",
+    alt: "Membership Benefits",
   },
-  {
-    title: "Why Become a Member?",
-    content: [
-      "As an IDA member, you gain access to an extensive network of professionals, businesses, and experts from around the world who share your passion for durians.",
-      "Here are some of the exclusive benefits of becoming a member:",
-      "• Access to Cutting-Edge Research and Insights: Stay informed with our comprehensive research reports, market analyses, and industry updates.",
-      "• Exclusive Networking Opportunities: Connect with other members at our events, workshops, and conferences.",
-      "• Educational Programs and Workshops: Enhance your skills through tailored training programs on various topics.",
-      "• Quality Certification and Recognition: Gain recognition with our IDA certification, enhancing your product's reputation.",
-      "• Advocacy and Representation: Benefit from IDA's efforts to advocate for fair trade practices and sustainable development.",
-    ],
+  description: [
+    "As a member of the International Durian Association, you'll be part of a vibrant and growing network dedicated to the advancement of the durian industry.",
+    "We offer several membership options tailored to meet your needs, whether you're a grower, researcher, business professional, or durian enthusiast. Here are some of the benefits you'll enjoy as a member:",
+  ],
+  waysToGetInvolved: [
+    "• Access to Exclusive Resources: Gain entry to our extensive library of research papers, industry reports, and best practice guides that are available only to members.",
+    "• Networking Opportunities: Connect with other members around the world through our online platform, regional events, and international conferences. Share insights, build partnerships, and collaborate on projects.",
+    "• Educational Programs: Participate in workshops, webinars, and training sessions led by experts to stay up-to-date with the latest trends, innovations, and techniques in the durian industry.",
+    "• Discounted Rates: Enjoy reduced fees for our events, publications, and certifications, as well as exclusive offers from our partners.",
+    "• Influence the Future: Have a voice in shaping the future of the durian industry by participating in our committees, contributing to policy discussions, and voting in association elections.",
+    "• Member Recognition: Be recognized for your contributions and achievements within the community through our awards program and member spotlights.",
+  ],
+  conclusion: {
+    text: "Join us today to take advantage of these benefits and be a part of a community that shares your passion for durians. Together, we can drive innovation, sustainability, and success in the durian industry worldwide!",
   },
-  {
-    title: "Membership Levels",
-    content: [
-      "IDA offers various membership levels to suit the diverse needs of our community:",
-      "• Basic Membership: Ideal for individuals and small businesses looking to access our resources and network.",
-      "• Premium Membership: Designed for larger organizations seeking comprehensive support and recognition.",
-    ],
-  },
-  {
-    title: "Join Us Today",
-    content: [
-      "Become a part of the International Durian Association and take your place in the global durian community.",
-      "Together, we can achieve new heights of success and innovation.",
-      "Contact us today to learn more about our membership benefits and how to join.",
-    ],
-  },
-];
+};
 
 export default function Membership() {
   return (
-    <div className="feature-block">
-      <div className="container py-20">
-        <h1 className="text-center text-white uppercase font-bold text-3xl md:text-6xl mb-20">
-          Membership
+    <>
+      <div
+        className="section-block-header min-h-[200px] md:min-h-[600px] mb-20"
+        style={{ backgroundImage: "url(/images/membership.jpg)" }}
+      >
+        <h1 className="text-3xl font-medium text-white md:text-6xl text-center">
+          Become a Member of the International Durian Association!
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {MembershipData.map((section, index) => (
-            <div key={index} className="p-4">
-              <h2 className="mb-4 border-t-4 text-white font-bold text-4xl border-[#FDC00D] pt-2">
-                {section.title}
-              </h2>
-              {section.content.map((paragraph, idx) => (
-                <p key={idx} className="mb-2 text-white text-justify">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+      </div>
+      <div className="container md:max-w-[860px] mb-20">
+        <p className="text-[#676767] text-lg font-medium text-center mb-3">
+          Home/<span className="text-[#468448]">{membershipData.title}</span>
+        </p>
+        <h1 className="text-center text-3xl md:text-5xl uppercase font-bold mb-4">
+          {membershipData.title}
+        </h1>
+        <h2 className="text-center font-medium text-xl mb-5">
+          {membershipData.subtitle}
+        </h2>
+        <h3 className="text-center text-[#01827D] font-medium text-3xl">
+          {membershipData.highlight}
+        </h3>
+        <div className="w-[247px] border-t-4 border-[#01827D] mt-2 mx-auto mb-14"></div>
+        <img
+          src={membershipData.image.url}
+          alt={membershipData.image.alt}
+          className="mb-14"
+        />
+
+        <div>
+          {membershipData.description.map((paragraph, index) => (
+            <p className="text-justify leading-7 text-[#727272]" key={index}>
+              {paragraph}
+            </p>
           ))}
         </div>
+
+        <div className="mb-5">
+          <ul>
+            {membershipData.waysToGetInvolved.map((item, index) => (
+              <li className="text-justify leading-7 text-[#727272]" key={index}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="bg-[#FDC20E] p-4">
+          <p className="text-justify text-white">
+            {membershipData.conclusion.text}
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
