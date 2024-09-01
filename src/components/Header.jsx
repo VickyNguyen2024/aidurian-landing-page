@@ -35,7 +35,7 @@ export default function Header() {
 
 const TopBar = () => {
   return (
-    <div className="h-[40px] bg-[#468448] flex flex-row-reverse items-center">
+    <div className="h-[40px] bg-[#008481] flex flex-row-reverse items-center">
       <div className="container">
         <div className="flex flex-row-reverse items-center">
           <Select>
@@ -71,12 +71,15 @@ const DesktopSearchBar = () => {
         </div>
         <div className="flex flex-row-reverse items-center gap-10">
           <div className="flex items-center gap-3">
-            <button className="text-white cursor-pointer border-seagreen-200 border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#468448] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
-              Log in
-            </button>
-            <button className="cursor-pointer border-seagreen-200 border-[1px] border-solid py-[7px] pl-10 pr-[38px] bg-white shadow-md rounded flex flex-row items-start justify-start hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
+            <Link
+              href={"/register"}
+              className="flex-1 flex items-center justify-center text-white cursor-pointer border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#008481] shadow-md rounded whitespace-nowrap hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border"
+            >
               Register
-            </button>
+            </Link>
+            {/* <button className="cursor-pointer border-seagreen-200 border-[1px] border-solid py-[7px] pl-10 pr-[38px] bg-white shadow-md rounded flex flex-row items-start justify-start hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
+              Register
+            </button> */}
           </div>
           <div>
             <input
@@ -99,7 +102,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/"
-            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+            ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/"}
@@ -109,7 +112,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/membership"
-            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+            ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/membership"}
@@ -119,7 +122,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/news"
-            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+            ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/news"}
@@ -129,7 +132,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/upcoming-event"
-            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+            ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/upcoming-event"}
@@ -139,7 +142,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/get-involved"
-            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+            ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/get-involved"}
@@ -149,7 +152,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/local-sites"
-            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+            ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/local-sites"}
@@ -159,7 +162,7 @@ const DestopNavbar = () => {
       <Link
         className={`link ${
           pathname === "/contact"
-            ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+            ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
             : "hover:opacity-60 transition-all"
         }`}
         href={"/contact"}
@@ -183,9 +186,9 @@ const MobileNavbar = () => {
           </Link>
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
-              <X size={35} className="text-[#468448]" />
+              <X size={35} className="text-[#008481]" />
             ) : (
-              <Menu size={35} className="text-[#468448]" />
+              <Menu size={35} className="text-[#008481]" />
             )}
           </button>
         </div>
@@ -206,7 +209,7 @@ const MobileNavbar = () => {
           <Link
             className={`link ${
               pathname === "/"
-                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
                 : "hover:opacity-60 transition-all"
             }`}
             href={"/"}
@@ -217,7 +220,7 @@ const MobileNavbar = () => {
           <Link
             className={`link ${
               pathname === "/membership"
-                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
                 : "hover:opacity-60 transition-all"
             }`}
             href={"/membership"}
@@ -228,7 +231,7 @@ const MobileNavbar = () => {
           <Link
             className={`link ${
               pathname === "/news"
-                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
                 : "hover:opacity-60 transition-all"
             }`}
             href={"/news"}
@@ -239,7 +242,7 @@ const MobileNavbar = () => {
           <Link
             className={`link ${
               pathname === "/upcoming-event"
-                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
                 : "hover:opacity-60 transition-all"
             }`}
             href={"/upcoming-event"}
@@ -250,7 +253,7 @@ const MobileNavbar = () => {
           <Link
             className={`link ${
               pathname === "/get-involved"
-                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
                 : "hover:opacity-60 transition-all"
             }`}
             href={"/get-involved"}
@@ -261,7 +264,7 @@ const MobileNavbar = () => {
           <Link
             className={`link ${
               pathname === "/local-sites"
-                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
                 : "hover:opacity-60 transition-all"
             }`}
             href={"/local-sites"}
@@ -272,7 +275,7 @@ const MobileNavbar = () => {
           <Link
             className={`link ${
               pathname === "/contact"
-                ? "font-bold text-[#468448] cursor-default border-b-[1px] border-[#468448] leading-none"
+                ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
                 : "hover:opacity-60 transition-all"
             }`}
             href={"/contact"}
@@ -283,12 +286,15 @@ const MobileNavbar = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <button className="flex-1 text-white cursor-pointer border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#468448] shadow-md rounded whitespace-nowrap hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
-            Log in
-          </button>
-          <button className="flex-1 cursor-pointer border-[1px] border-solid py-[7px] pl-10 pr-[38px] bg-white shadow-md rounded hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
+          <Link
+            href={"/register"}
+            className="flex-1 flex items-center justify-center text-white cursor-pointer border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#008481] shadow-md rounded whitespace-nowrap hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border"
+          >
             Register
-          </button>
+          </Link>
+          {/* <button className="flex-1 cursor-pointer border-[1px] border-solid py-[7px] pl-10 pr-[38px] bg-white shadow-md rounded hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
+            Register
+          </button> */}
         </div>
       </div>
     </div>

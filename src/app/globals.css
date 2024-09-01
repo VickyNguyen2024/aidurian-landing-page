@@ -33,12 +33,7 @@ body {
 }
 
 .explore-section {
-  background: rgb(71, 114, 24);
-  background: linear-gradient(
-    0deg,
-    rgba(71, 114, 24, 1) 0%,
-    rgba(194, 208, 63, 1) 100%
-  );
+  background: #008481;
 }
 
 .feature-block {

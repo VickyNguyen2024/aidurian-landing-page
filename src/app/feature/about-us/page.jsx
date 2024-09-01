@@ -1,3 +1,5 @@
+import SectionBlockHeader from "@/components/SectionBlockHeader";
+
 const aboutIDAData = [
   {
     title: "About Us",
@@ -45,13 +47,17 @@ export default function AboutUs() {
   return (
     <div className="feature-block">
       <div className="container py-20">
-        <h1 className="text-center text-white uppercase font-bold text-3xl md:text-6xl mb-20">
-          ABOUT IDA
-        </h1>
+        <SectionBlockHeader
+          title="ABOUT IDA"
+          height="321"
+          url="url(/images/about-ida.jpg)"
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {aboutIDAData.map((section, index) => (
             <div key={index} className="p-4">
-              <h2 className="mb-4 border-t-4 text-white font-bold text-4xl border-[#FDC00D] pt-2">{section.title}</h2>
+              <h2 className="mb-4 border-t-4 text-white font-bold text-4xl border-[#FDC00D] pt-2">
+                {section.title}
+              </h2>
               {section.content.map((paragraph, idx) => (
                 <p key={idx} className="mb-2 text-white text-justify">
                   {paragraph}

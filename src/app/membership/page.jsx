@@ -1,3 +1,5 @@
+import SectionBlockHeader from "@/components/SectionBlockHeader";
+
 const membershipData = {
   title: "Membership",
   subtitle:
@@ -27,17 +29,14 @@ const membershipData = {
 export default function Membership() {
   return (
     <>
-      <div
-        className="section-block-header min-h-[200px] md:min-h-[600px] mb-20"
-        style={{ backgroundImage: "url(/images/membership.jpg)" }}
-      >
-        <h1 className="text-3xl font-medium text-white md:text-6xl text-center">
-          Become a Member of the International Durian Association!
-        </h1>
-      </div>
+      <SectionBlockHeader
+        height="600"
+        title="Become a Member of the International Durian Association!"
+        url="url(/images/membership.jpg)"
+      />
       <div className="container md:max-w-[860px] mb-20">
         <p className="text-[#676767] text-lg font-medium text-center mb-3">
-          Home/<span className="text-[#468448]">{membershipData.title}</span>
+          Home/<span className="text-[#008481]">{membershipData.title}</span>
         </p>
         <h1 className="text-center text-3xl md:text-5xl uppercase font-bold mb-4">
           {membershipData.title}

@@ -1,3 +1,5 @@
+import SectionBlockHeader from "@/components/SectionBlockHeader";
+
 const qualityControlData = [
   {
     title: "Quality Control",
@@ -42,9 +44,11 @@ export default function QualityControl() {
   return (
     <div className="feature-block">
       <div className="container py-20">
-        <h1 className="text-center text-white uppercase font-bold text-3xl md:text-6xl mb-20">
-          Quality control
-        </h1>
+        <SectionBlockHeader
+          title="Quality control"
+          height="321"
+          url="url(/images/quality-control.jpg)"
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {qualityControlData.map((section, index) => (
             <div key={index} className="p-4">

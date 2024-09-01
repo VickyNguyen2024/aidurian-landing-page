@@ -1,3 +1,5 @@
+import SectionBlockHeader from "@/components/SectionBlockHeader";
+
 const networkData = [
   {
     title: "Network",
@@ -30,9 +32,7 @@ export default function Network() {
   return (
     <div className="feature-block">
       <div className="container py-20">
-        <h1 className="text-center text-white uppercase font-bold text-3xl md:text-6xl mb-20">
-          Network
-        </h1>
+        <SectionBlockHeader height="321" title="Network" url="url(/images/network.jpg)" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {networkData.map((section, index) => (
             <div key={index} className="p-4">

@@ -1,3 +1,5 @@
+import SectionBlockHeader from "@/components/SectionBlockHeader";
+
 const IDAPartnersData = [
   {
     title: "IDA Partners",
@@ -38,9 +40,11 @@ export default function IDAPartners() {
   return (
     <div className="feature-block">
       <div className="container py-20">
-        <h1 className="text-center text-white uppercase font-bold text-3xl md:text-6xl mb-20">
-          IDA Partners
-        </h1>
+        <SectionBlockHeader
+          title="IDA Partners"
+          height="321"
+          url="url(/images/ida-partner.jpg)"
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {IDAPartnersData.map((section, index) => (
             <div key={index} className="p-4">

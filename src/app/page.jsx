@@ -54,7 +54,7 @@ const TopBanner = () => {
         </h2>
         <button
           type="button"
-          className="text-white cursor-pointer font-bold text-lg py-2 pl-12 pr-[46px] bg-[#468448] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
+          className="text-white cursor-pointer font-bold text-lg py-2 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
         >
           Register your team
         </button>
@@ -105,7 +105,7 @@ const GoalSection = () => {
             distributors, and enthusiasts worldwide.
           </p>
         </div>
-        <div className="bg-[#468448] pl-9 pt-5">
+        <div className="bg-[#008481] pl-9 pt-5">
           <div className="flex items-center gap-2 border-b-[1px] border-white pb-2 mb-5">
             <Image
               src={"/icon/leaf-icon.svg"}
@@ -125,7 +125,7 @@ const GoalSection = () => {
             resources, knowledge, and opportunities needed to thrive.
           </p>
         </div>
-        <div className="bg-[#8CC541] pl-9 pt-5">
+        <div className="bg-[#FCC009] pl-9 pt-5">
           <div className="flex items-center gap-2 border-b-[1px] border-white pb-2 mb-5">
             <Image
               src={"/icon/leaf-icon.svg"}
@@ -263,7 +263,7 @@ const BecomeAMember = () => {
         </p>
         <button
           type="button"
-          className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#446E18] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
+          className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
         >
           Become a member
         </button>
@@ -287,7 +287,7 @@ const FeatureSection = () => {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-8">
             <div className="rounded shadow-lg">
-              <img src={"/images/feature-1.png"} className="w-full h-auto" />
+              <img src={"/images/feature-1.jpg"} className="w-full h-[245px] object-cover" />
               <div className="py-5 px-4">
                 <h1 className="pb-7 border-b-2 border-gray-200 text-center text-2xl mb-5">
                   Generate excitement
@@ -300,7 +300,7 @@ const FeatureSection = () => {
               </div>
             </div>
             <div className="rounded shadow-lg">
-              <img src={"/images/feature-2.png"} className="w-full h-auto" />
+              <img src={"/images/feature-2.jpg"} className="w-full h-[245px] object-cover" />
               <div className="py-5 px-4">
                 <h1 className="pb-7 border-b-2 border-gray-200 text-center text-2xl mb-5">
                   Grab interest
@@ -312,7 +312,7 @@ const FeatureSection = () => {
               </div>
             </div>
             <div className="rounded shadow-lg">
-              <img src={"/images/feature-3.png"} className="w-full h-auto" />
+              <img src={"/images/feature-3.jpg"} className="w-full h-[245px] object-cover" />
               <div className="py-5 px-4">
                 <h1 className="pb-7 border-b-2 border-gray-200 text-center text-2xl mb-5">
                   Key Achievements
@@ -325,7 +325,7 @@ const FeatureSection = () => {
               </div>
             </div>
           </div>
-          <button className="border-[1px] border-[#468448] bg-white text-[#468448] font-medium block mx-auto rounded py-2 px-4">
+          <button className="border-[1px] border-[#008481] bg-white text-[#008481] font-medium block mx-auto rounded py-2 px-4">
             Set up your free account
           </button>
         </div>
@@ -359,7 +359,7 @@ const ExploreTheReport = () => {
         </p>
         <button
           type="button"
-          className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#446E18] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
+          className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
         >
           Explore the report now!
         </button>

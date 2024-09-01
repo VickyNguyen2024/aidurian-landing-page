@@ -36,7 +36,7 @@ export default function GetInvolved() {
       </div>
       <div className="container md:max-w-[860px] mb-20">
         <p className="text-[#676767] text-lg font-medium text-center mb-3">
-          Home/<span className="text-[#468448]">{getInvolvedData.title}</span>
+          Home/<span className="text-[#008481]">{getInvolvedData.title}</span>
         </p>
         <h1 className="text-center text-3xl md:text-5xl uppercase font-bold mb-4">
           {getInvolvedData.title}
