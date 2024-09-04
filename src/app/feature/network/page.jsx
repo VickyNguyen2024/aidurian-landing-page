@@ -32,7 +32,11 @@ export default function Network() {
   return (
     <div className="feature-block">
       <div className="container py-20">
-        <SectionBlockHeader height="321" title="Network" url="url(/images/network.jpg)" />
+        <SectionBlockHeader
+          height="321"
+          // title="Network"
+          url="url(/images/network.jpg)"
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {networkData.map((section, index) => (
             <div key={index} className="p-4">

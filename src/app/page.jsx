@@ -116,7 +116,7 @@ const GoalSection = () => {
             {t("GoalMissionVision.Mission.description")}
           </p>
         </div>
-        <div className="bg-[#FCC009] pl-9 pt-5">
+        <div className="bg-[#FF963A] pl-9 pt-5">
           <div className="flex items-center gap-2 border-b-[1px] border-white pb-2 mb-5">
             <Image
               src={"/icon/leaf-icon.svg"}

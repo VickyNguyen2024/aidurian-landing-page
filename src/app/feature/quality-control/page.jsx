@@ -45,7 +45,7 @@ export default function QualityControl() {
     <div className="feature-block">
       <div className="container py-20">
         <SectionBlockHeader
-          title="Quality control"
+          // title="Quality control"
           height="321"
           url="url(/images/quality-control.jpg)"
         />

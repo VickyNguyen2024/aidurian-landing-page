@@ -39,7 +39,7 @@ export default function ResourcesAndServices() {
     <div className="feature-block">
       <div className="container py-20">
         <SectionBlockHeader
-          title="Resources And Services"
+          // title="Resources And Services"
           height="321"
           url="url(/images/resources-and-services.jpg)"
         />

@@ -6,7 +6,7 @@ const membershipData = {
     "Are you passionate about durians and eager to connect with a global community of like-minded individuals?",
   highlight: "JOIN US AND ENJOY EXCLUSIVE BENEFITS!",
   image: {
-    url: "/images/membership-2.png",
+    url: "/images/membership-2.jpg",
     alt: "Membership Benefits",
   },
   description: [

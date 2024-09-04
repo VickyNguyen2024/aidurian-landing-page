@@ -41,7 +41,7 @@ export default function IDAPartners() {
     <div className="feature-block">
       <div className="container py-20">
         <SectionBlockHeader
-          title="IDA Partners"
+          // title="IDA Partners"
           height="321"
           url="url(/images/ida-partner.jpg)"
         />

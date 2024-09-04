@@ -1,3 +1,5 @@
+import SectionBlockHeader from "@/components/SectionBlockHeader";
+
 const leadingTheFutureOfDurianCultivationData = [
   {
     title: "Leading the Future of Durian Cultivation",
@@ -43,9 +45,11 @@ export default function LeadingTheFutureOfDurianCultivation() {
   return (
     <div className="feature-block">
       <div className="container py-20">
-        <h1 className="text-center text-white uppercase font-bold text-3xl md:text-6xl mb-20">
-          Leading The Future Of Durian Cultivation
-        </h1>
+        <SectionBlockHeader
+          // title="Leading The Future Of Durian Cultivation"
+          height="321"
+          url="url(/images/feature-5.jpg)"
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {leadingTheFutureOfDurianCultivationData.map((section, index) => (
             <div key={index} className="p-4">

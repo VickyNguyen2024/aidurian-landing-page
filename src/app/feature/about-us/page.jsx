@@ -48,7 +48,7 @@ export default function AboutUs() {
     <div className="feature-block">
       <div className="container py-20">
         <SectionBlockHeader
-          title="ABOUT IDA"
+          // title="ABOUT IDA"
           height="321"
           url="url(/images/about-ida.jpg)"
         />

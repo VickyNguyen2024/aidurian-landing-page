@@ -1,3 +1,5 @@
+import SectionBlockHeader from "@/components/SectionBlockHeader";
+
 const adaptingToADynamicMarketData = [
   {
     title: "Adapting to a Dynamic Market",
@@ -44,9 +46,11 @@ export default function AdaptingToADynamicMarket() {
   return (
     <div className="feature-block">
       <div className="container py-20">
-        <h1 className="text-center text-white uppercase font-bold text-3xl md:text-6xl mb-20">
-          Adapting To A Dynamic Market
-        </h1>
+        <SectionBlockHeader
+          // title="Adapting To A Dynamic Market"
+          height="321"
+          url="url(/images/feature-7.jpg)"
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {adaptingToADynamicMarketData.map((section, index) => (
             <div key={index} className="p-4">

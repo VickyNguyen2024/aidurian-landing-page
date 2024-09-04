@@ -44,7 +44,7 @@ export default function Membership() {
       <div className="container py-20">
         <SectionBlockHeader
           height="321"
-          title="Membership"
+          // title="Membership"
           url="url(/images/membership.jpg)"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
