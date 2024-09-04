@@ -1,0 +1,89 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "membership": "Membership",
+    "news": "News",
+    "upcoming-event": "Upcoming event",
+    "get-involved": "Get involved",
+    "local-sites": "Local sites",
+    "contact": "Contact",
+    "register": "Register",
+    "search-box": "Search Aidurian"
+  },
+  "Banner": {
+    "welcome-to-ida": "Welcome to IDA",
+    "title": "International<br /> Durian Association",
+    "description": "The International Durian Association (IDA) is a global non-profit organization committed to promoting sustainable development and exceptional quality in the durian industry. With a mission to connect producers, exporters, and consumers worldwide, IDA creates a robust platform for collaboration, aiming to enhance product standards and add value for all partners involved.",
+    "register": "Register your team"
+  },
+  "GoalMissionVision": {
+    "Goal": {
+      "title": "Our goal",
+      "description": "At the International Durian Association (IDA) our primary goal is to elevate the global recognition and appreciation of durian through innovative research, sustainable practices, and international collaboration. We aim to be the leading authority in the durian industry, fostering growth and excellence among producers, distributors, and enthusiasts worldwide."
+    },
+    "Mission": {
+      "title": "Our mission",
+      "description": "Our mission is to support and advance the durian industry by promoting best practices in cultivation, ensuring high standards in quality and safety, and advocating for sustainable and eco-friendl y methods. We strive to create a network of experts, growers, and consumers who are passionate about durian, providing them with the resources, knowledge, and opportunities needed to thrive."
+    },
+    "Vision": {
+      "title": "Our vision",
+      "description": "Our vision is to become the premier global hub for durian innovation and excellence. We envision a future where durian is celebrated and enjoyed by people from all walks of life, where the industry thrives through sustainable and ethical practices, and where IDA serves as the central platform for education, advocacy, and collaboration in the durian community."
+    }
+  },
+  "HowWeHelpYou": {
+    "title": "How we help you and the durian industry evolve",
+    "description": "We empower change in individuals and organizations, helping durian<br/> professionals adapt, grow, and lead",
+    "1": "Empowering Durian Professionals",
+    "2": "Leading the Future of Durian Cultivation",
+    "3": "Driving Change in the Durian Industry",
+    "4": "Adapting to a Dynamic Market"
+  },
+  "Banner2": {
+    "title": "Become a part of a dynamic community dedicated to advancing the durian industry.",
+    "description": "Explore our membership benefits and join today!",
+    "register": "Become a member"
+  },
+  "SpecializedSupport": {
+    "title": "Specialized support to fit your specific needs",
+    "description": "Wherever you are, we're here.",
+    "1": {
+      "title": "Generate excitement",
+      "description": "Unleash your passion for durian with IDA's exciting events and activities. Connect, explore, and celebrate the king of fruits with us!"
+    },
+    "2": {
+      "title": "Grab interest",
+      "description": "IDA provides you with a comprehensive and in-depth perspective on durian, from its origins to modern cultivation techniques."
+    },
+    "3": {
+      "title": "Key Achievements",
+      "description": "IDA showcases prominent events and innovative initiatives aimed at enhancing the quality and value of durian in the global market."
+    },
+    "register": "Set up your free account"
+  },
+  "Banner3": {
+    "title": "Innovation, excellence, and community - these are the pillars that drive IDA.",
+    "description": "We are committed to enhancing quality and promoting sustainable development in the global durian industry.",
+    "register": "Explore the report now!"
+  },
+  "Explore": {
+    "title": "Explore our resources, services, and networking opportunities",
+    "description": "to collectively advance the durian sector",
+    "1": "About IDA",
+    "2": "Resources & Services",
+    "3": "Quality control",
+    "4": "IDA partners",
+    "5": "Membership",
+    "6": "Network"
+  },
+  "Footer": {
+    "description": "This site is sponsored by the International Durian Association, the global representative organization for the durian industry, committed to promoting innovation, ensuring quality, and fostering sustainable development. The Association was founded by leading experts and reputable organizations within the durian industry.",
+    "about": "About",
+    "term": "Terms & Conditions",
+    "accessibility": "Accessibility",
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "help": "Help",
+    "site-map": "Site Map",
+    "watermark": "CA Do Not Sell or Share My Personal Information"
+  }
+}

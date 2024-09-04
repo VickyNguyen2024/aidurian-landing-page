@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -23,6 +24,8 @@ export default function Home() {
 }
 
 const TopBanner = () => {
+  const t = useTranslations();
+
   return (
     <div className="flex flex-row-reverse items-center bg-[#FFE281]">
       <div className="relative hidden md:block min-h-[656px] w-1/2 flex-1">
@@ -35,28 +38,20 @@ const TopBanner = () => {
       </div>
       <div className="flex-1 md:pl-[400px] p-4 md:p-0">
         <h1 className="bg-[#FABF03] text-lg text-white px-5 rounded max-w-fit mb-2">
-          Welcome to IDA
+          {t("Banner.welcome-to-ida")}
         </h1>
-        <h1
+        <div
+          dangerouslySetInnerHTML={{ __html: t("Banner.title") }}
           className={`${playfairDisplay.className} font-bold text-5xl text-[#282937] mb-7`}
-        >
-          International
-          <br />
-          Durian Association
-        </h1>
+        />
         <h2 className="text-lg font-medium text-balance mb-6">
-          The International Durian Association (IDA) is a global non-profit
-          organization committed to promoting sustainable development and
-          exceptional quality in the durian industry. With a mission to connect
-          producers, exporters, and consumers worldwide, IDA creates a robust
-          platform for collaboration, aiming to enhance product standards and
-          add value for all partners involved.
+          {t("Banner.description")}
         </h2>
         <button
           type="button"
           className="text-white cursor-pointer font-bold text-lg py-2 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
         >
-          Register your team
+          {t("Banner.register")}
         </button>
       </div>
     </div>
@@ -82,6 +77,8 @@ const IntroductionVideo = () => {
 };
 
 const GoalSection = () => {
+  const t = useTranslations();
+
   return (
     <div className="container mb-24">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
@@ -94,15 +91,12 @@ const GoalSection = () => {
               width={0}
               className="w-6 h-auto"
             />
-            <h1 className="text-xl text-white font-bold">OUR GOAL</h1>
+            <h1 className="text-xl text-white font-bold uppercase">
+              {t("GoalMissionVision.Goal.title")}
+            </h1>
           </div>
           <p className="text-justify pr-9 md:pr-20 pb-9 text-white">
-            At the International Durian Association (IDA) our primary goal is to
-            elevate the global recognition and appreciation of durian through
-            innovative research, sustainable practices, and international
-            collaboration. We aim to be the leading authority in the durian
-            industry, fostering growth and excellence among producers,
-            distributors, and enthusiasts worldwide.
+            {t("GoalMissionVision.Goal.description")}
           </p>
         </div>
         <div className="bg-[#008481] pl-9 pt-5">
@@ -114,15 +108,12 @@ const GoalSection = () => {
               width={0}
               className="w-6 h-auto"
             />
-            <h1 className="text-xl text-white font-bold">OUR MISSION</h1>
+            <h1 className="text-xl text-white font-bold uppercase">
+              {t("GoalMissionVision.Mission.title")}
+            </h1>
           </div>
           <p className="text-justify pr-9 md:pr-20 pb-9 text-white">
-            Our mission is to support and advance the durian industry by
-            promoting best practices in cultivation, ensuring high standards in
-            quality and safety, and advocating for sustainable and eco-friendl y
-            methods. We strive to create a network of experts, growers, and
-            consumers who are passionate about durian, providing them with the
-            resources, knowledge, and opportunities needed to thrive.
+            {t("GoalMissionVision.Mission.description")}
           </p>
         </div>
         <div className="bg-[#FCC009] pl-9 pt-5">
@@ -134,15 +125,12 @@ const GoalSection = () => {
               width={0}
               className="w-6 h-auto"
             />
-            <h1 className="text-xl text-white font-bold">OUR VISION</h1>
+            <h1 className="text-xl text-white font-bold uppercase">
+              {t("GoalMissionVision.Vision.title")}
+            </h1>
           </div>
           <p className="text-justify pr-9 md:pr-20 pb-9 text-white">
-            Our vision is to become the premier global hub for durian innovation
-            and excellence. We envision a future where durian is celebrated and
-            enjoyed by people from all walks of life, where the industry thrives
-            through sustainable and ethical practices, and where IDA serves as
-            the central platform for education, advocacy, and collaboration in
-            the durian community.
+            {t("GoalMissionVision.Vision.description")}
           </p>
         </div>
       </div>
@@ -151,19 +139,20 @@ const GoalSection = () => {
 };
 
 const InformationSection = () => {
+  const t = useTranslations();
+
   return (
     <div className="container mb-24">
       <div className="lg:w-2/3 mx-auto">
         <h1
           className={`${playfairDisplay.className} text-3xl light:text-[#282937] text-center mb-5`}
         >
-          How we help you and the durian industry evolve
+          {t("HowWeHelpYou.title")}
         </h1>
-        <h2 className="text-center text-xl mb-10">
-          We empower change in individuals and organizations, helping durian
-          <br />
-          professionals adapt, grow, and lead
-        </h2>
+        <div
+          dangerouslySetInnerHTML={{ __html: t("HowWeHelpYou.description") }}
+          className="text-center text-xl mb-10"
+        />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <Link
             href={"/feature/empowering-durian-professionals"}
@@ -177,9 +166,7 @@ const InformationSection = () => {
               />
             </div>
             <div>
-              <h1 className="font-bold text-lg">
-                Empowering Durian Professionals
-              </h1>
+              <h1 className="font-bold text-lg">{t("HowWeHelpYou.1")}</h1>
             </div>
           </Link>
           <Link
@@ -194,9 +181,7 @@ const InformationSection = () => {
               />
             </div>
             <div>
-              <h1 className="font-bold text-lg">
-                Leading the Future of Durian Cultivation
-              </h1>
+              <h1 className="font-bold text-lg">{t("HowWeHelpYou.2")}</h1>
             </div>
           </Link>
           <Link
@@ -211,9 +196,7 @@ const InformationSection = () => {
               />
             </div>
             <div>
-              <h1 className="font-bold text-lg">
-                Driving Change in the Durian Industry
-              </h1>
+              <h1 className="font-bold text-lg">{t("HowWeHelpYou.3")}</h1>
             </div>
           </Link>
           <Link
@@ -228,9 +211,7 @@ const InformationSection = () => {
               />
             </div>
             <div>
-              <h1 className="font-bold text-lg">
-                Adapting to a Dynamic Market
-              </h1>
+              <h1 className="font-bold text-lg">{t("HowWeHelpYou.4")}</h1>
             </div>
           </Link>
         </div>
@@ -240,6 +221,8 @@ const InformationSection = () => {
 };
 
 const BecomeAMember = () => {
+  const t = useTranslations();
+
   return (
     <div
       className="min-h-[993px] flex flex-col justify-center items-center"
@@ -255,17 +238,14 @@ const BecomeAMember = () => {
         <h1
           className={`${playfairDisplay.className} font-medium text-3xl md:text-5xl leading-tight mb-5`}
         >
-          Become a part of a dynamic community dedicated to advancing the durian
-          industry.
+          {t("Banner2.title")}
         </h1>
-        <p className="text-xl font-light mb-8">
-          Explore our membership benefits and join today!
-        </p>
+        <p className="text-xl font-light mb-8">{t("Banner2.description")}</p>
         <button
           type="button"
           className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
         >
-          Become a member
+          {t("Banner2.register")}
         </button>
       </div>
     </div>
@@ -273,6 +253,8 @@ const BecomeAMember = () => {
 };
 
 const FeatureSection = () => {
+  const t = useTranslations();
+
   return (
     <div className="bg-[#EFEFEF] py-24">
       <div className="container">
@@ -280,53 +262,57 @@ const FeatureSection = () => {
           <h1
             className={`${playfairDisplay.className} text-3xl light:text-[#282937] text-center mb-5`}
           >
-            Specialized support to fit your specific needs
+            {t("SpecializedSupport.title")}
           </h1>
           <h2 className="text-center text-xl mb-10">
-            Wherever you are, we’re here.
+            {t("SpecializedSupport.description")}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-8">
             <div className="rounded shadow-lg">
-              <img src={"/images/feature-1.jpg"} className="w-full h-[245px] object-cover" />
+              <img
+                src={"/images/feature-1.jpg"}
+                className="w-full h-[245px] object-cover"
+              />
               <div className="py-5 px-4">
                 <h1 className="pb-7 border-b-2 border-gray-200 text-center text-2xl mb-5">
-                  Generate excitement
+                  {t("SpecializedSupport.1.title")}
                 </h1>
                 <p className="font-light text-center">
-                  Unleash your passion for durian with IDA’s exciting events and
-                  activities. Connect, explore, and celebrate the king of fruits
-                  with us!
+                  {t("SpecializedSupport.1.description")}
                 </p>
               </div>
             </div>
             <div className="rounded shadow-lg">
-              <img src={"/images/feature-2.jpg"} className="w-full h-[245px] object-cover" />
+              <img
+                src={"/images/feature-2.jpg"}
+                className="w-full h-[245px] object-cover"
+              />
               <div className="py-5 px-4">
                 <h1 className="pb-7 border-b-2 border-gray-200 text-center text-2xl mb-5">
-                  Grab interest
+                  {t("SpecializedSupport.2.title")}
                 </h1>
                 <p className="font-light text-center">
-                  IDA provides you with a comprehensive and in-depth perspective
-                  on durian, from its origins to modern cultivation techniques.
+                  {t("SpecializedSupport.2.description")}
                 </p>
               </div>
             </div>
             <div className="rounded shadow-lg">
-              <img src={"/images/feature-3.jpg"} className="w-full h-[245px] object-cover" />
+              <img
+                src={"/images/feature-3.jpg"}
+                className="w-full h-[245px] object-cover"
+              />
               <div className="py-5 px-4">
                 <h1 className="pb-7 border-b-2 border-gray-200 text-center text-2xl mb-5">
-                  Key Achievements
+                  {t("SpecializedSupport.3.title")}
                 </h1>
                 <p className="font-light text-center">
-                  IDA showcases prominent events and innovative initiatives
-                  aimed at enhancing the quality and value of durian in the
-                  global market.
+                  {t("SpecializedSupport.3.description")}
                 </p>
               </div>
             </div>
           </div>
           <button className="border-[1px] border-[#008481] bg-white text-[#008481] font-medium block mx-auto rounded py-2 px-4">
-            Set up your free account
+            {t("SpecializedSupport.register")}
           </button>
         </div>
       </div>
@@ -335,6 +321,8 @@ const FeatureSection = () => {
 };
 
 const ExploreTheReport = () => {
+  const t = useTranslations();
+
   return (
     <div
       className="min-h-[993px] flex flex-col justify-center items-center"
@@ -350,18 +338,14 @@ const ExploreTheReport = () => {
         <h1
           className={`${playfairDisplay.className} font-medium text-3xl md:text-5xl leading-tight mb-5`}
         >
-          Innovation, excellence, and community – these are the pillars that
-          drive IDA
+          {t("Banner3.title")}
         </h1>
-        <p className="text-xl font-light mb-8">
-          We are committed to enhancing quality and promoting sustainable
-          development in the global durian industry.
-        </p>
+        <p className="text-xl font-light mb-8">{t("Banner3.description")}</p>
         <button
           type="button"
           className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
         >
-          Explore the report now!
+          {t("Banner3.register")}
         </button>
       </div>
     </div>
@@ -369,6 +353,8 @@ const ExploreTheReport = () => {
 };
 
 const ExploreSection = () => {
+  const t = useTranslations();
+
   return (
     <div className="explore-section py-24">
       <div className="container">
@@ -376,16 +362,19 @@ const ExploreSection = () => {
           <h1
             className={`${playfairDisplay.className} text-3xl text-white text-center mb-5`}
           >
-            Explore our resources, services, and networking opportunities
+            {t("Explore.title")}
           </h1>
           <h2 className="text-center text-xl mb-14 text-white">
-            to collectively advance the durian sector
+            {t("Explore.description")}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8">
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/users.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/feature/about-us"}>
-                About IDA
+              <Link
+                className="text-3xl text-white underline"
+                href={"/feature/about-us"}
+              >
+                {t("Explore.1")}
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
@@ -394,31 +383,43 @@ const ExploreSection = () => {
                 className="text-3xl text-white underline"
                 href={"/feature/resources-and-services"}
               >
-                Resources & Services
+                {t("Explore.2")}
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/sliders.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/feature/quality-control"}>
-                Quality control
+              <Link
+                className="text-3xl text-white underline"
+                href={"/feature/quality-control"}
+              >
+                {t("Explore.3")}
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/user-check.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/feature/ida-partners"}>
-                IDA partners
+              <Link
+                className="text-3xl text-white underline"
+                href={"/feature/ida-partners"}
+              >
+                {t("Explore.4")}
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/user-plus.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/feature/membership"}>
-                Membership
+              <Link
+                className="text-3xl text-white underline"
+                href={"/feature/membership"}
+              >
+                {t("Explore.5")}
               </Link>
             </div>
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/share-2.svg"} alt="" />
-              <Link className="text-3xl text-white underline" href={"/feature/network"}>
-                Network
+              <Link
+                className="text-3xl text-white underline"
+                href={"/feature/network"}
+              >
+                {t("Explore.6")}
               </Link>
             </div>
           </div>

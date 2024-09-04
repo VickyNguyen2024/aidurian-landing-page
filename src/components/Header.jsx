@@ -5,7 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { startTransition, useState } from "react";
 import {
   Select,
   SelectTrigger,
@@ -15,6 +15,8 @@ import {
   SelectLabel,
   SelectItem,
 } from "@/components/ui/select";
+import { useTranslations, useLocale } from "next-intl";
+import { setUserLocale } from "@/services/locale";
 
 export default function Header() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
@@ -34,18 +36,27 @@ export default function Header() {
 }
 
 const TopBar = () => {
+  const locale = useLocale();
+
+  const onChange = (value) => {
+    const locale = value;
+    startTransition(() => {
+      setUserLocale(locale);
+    });
+  };
+
   return (
     <div className="h-[40px] bg-[#008481] flex flex-row-reverse items-center">
       <div className="container">
         <div className="flex flex-row-reverse items-center">
-          <Select>
+          <Select defaultValue={locale} onValueChange={onChange}>
             <SelectTrigger className="w-[100px] h-[30px] outline-none">
               <SelectValue placeholder="English" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="apple">English</SelectItem>
-                <SelectItem value="chinese">中国</SelectItem>
+                <SelectItem value="en">English</SelectItem>
+                <SelectItem value="cn">中国</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
@@ -56,6 +67,8 @@ const TopBar = () => {
 };
 
 const DesktopSearchBar = () => {
+  const t = useTranslations();
+
   return (
     <div className="container">
       <div className="flex items-center justify-between py-2">
@@ -75,7 +88,7 @@ const DesktopSearchBar = () => {
               href={"/register"}
               className="flex-1 flex items-center justify-center text-white cursor-pointer border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#008481] shadow-md rounded whitespace-nowrap hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border"
             >
-              Register
+              {t("Navbar.register")}
             </Link>
             {/* <button className="cursor-pointer border-seagreen-200 border-[1px] border-solid py-[7px] pl-10 pr-[38px] bg-white shadow-md rounded flex flex-row items-start justify-start hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
               Register
@@ -84,7 +97,7 @@ const DesktopSearchBar = () => {
           <div>
             <input
               className="border-[1px] w-[531px] border-solid border-black py-2 px-4 rounded"
-              placeholder="Search Aidurian"
+              placeholder={t("Navbar.search-box")}
               type="text"
             />
           </div>
@@ -96,6 +109,7 @@ const DesktopSearchBar = () => {
 
 const DestopNavbar = () => {
   const pathname = usePathname();
+  const t = useTranslations();
 
   return (
     <nav className="flex justify-center items-center gap-9 py-3 border-y-2 border-gray-200">
@@ -107,7 +121,7 @@ const DestopNavbar = () => {
         }`}
         href={"/"}
       >
-        Home
+        {t("Navbar.home")}
       </Link>
       <Link
         className={`link ${
@@ -117,7 +131,7 @@ const DestopNavbar = () => {
         }`}
         href={"/membership"}
       >
-        Membership
+        {t("Navbar.membership")}
       </Link>
       <Link
         className={`link ${
@@ -127,7 +141,7 @@ const DestopNavbar = () => {
         }`}
         href={"/news"}
       >
-        News
+        {t("Navbar.news")}
       </Link>
       <Link
         className={`link ${
@@ -137,7 +151,7 @@ const DestopNavbar = () => {
         }`}
         href={"/upcoming-event"}
       >
-        Upcoming event
+        {t("Navbar.upcoming-event")}
       </Link>
       <Link
         className={`link ${
@@ -147,7 +161,7 @@ const DestopNavbar = () => {
         }`}
         href={"/get-involved"}
       >
-        Get involved
+        {t("Navbar.get-involved")}
       </Link>
       <Link
         className={`link ${
@@ -157,7 +171,7 @@ const DestopNavbar = () => {
         }`}
         href={"/local-sites"}
       >
-        Local sites
+        {t("Navbar.local-sites")}
       </Link>
       <Link
         className={`link ${
@@ -167,7 +181,7 @@ const DestopNavbar = () => {
         }`}
         href={"/contact"}
       >
-        Contact
+        {t("Navbar.contact")}
       </Link>
     </nav>
   );
@@ -176,6 +190,7 @@ const DestopNavbar = () => {
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations();
 
   return (
     <div className="relative">
@@ -215,7 +230,7 @@ const MobileNavbar = () => {
             href={"/"}
             onClick={() => setIsOpen(false)}
           >
-            Home
+            {t("Navbar.home")}
           </Link>
           <Link
             className={`link ${
@@ -226,7 +241,7 @@ const MobileNavbar = () => {
             href={"/membership"}
             onClick={() => setIsOpen(false)}
           >
-            Membership
+            {t("Navbar.membership")}
           </Link>
           <Link
             className={`link ${
@@ -237,7 +252,7 @@ const MobileNavbar = () => {
             href={"/news"}
             onClick={() => setIsOpen(false)}
           >
-            News
+            {t("Navbar.news")}
           </Link>
           <Link
             className={`link ${
@@ -248,7 +263,7 @@ const MobileNavbar = () => {
             href={"/upcoming-event"}
             onClick={() => setIsOpen(false)}
           >
-            Upcoming event
+            {t("Navbar.upcoming-event")}
           </Link>
           <Link
             className={`link ${
@@ -259,7 +274,7 @@ const MobileNavbar = () => {
             href={"/get-involved"}
             onClick={() => setIsOpen(false)}
           >
-            Get involved
+            {t("Navbar.get-involved")}
           </Link>
           <Link
             className={`link ${
@@ -270,7 +285,7 @@ const MobileNavbar = () => {
             href={"/local-sites"}
             onClick={() => setIsOpen(false)}
           >
-            Local sites
+            {t("Navbar.local-sites")}
           </Link>
           <Link
             className={`link ${
@@ -281,16 +296,17 @@ const MobileNavbar = () => {
             href={"/contact"}
             onClick={() => setIsOpen(false)}
           >
-            Contact
+            {t("Navbar.contact")}
           </Link>
         </nav>
 
         <div className="flex items-center gap-2">
           <Link
             href={"/register"}
+            onClick={() => setIsOpen(false)}
             className="flex-1 flex items-center justify-center text-white cursor-pointer border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#008481] shadow-md rounded whitespace-nowrap hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border"
           >
-            Register
+            {t("Navbar.register")}
           </Link>
           {/* <button className="flex-1 cursor-pointer border-[1px] border-solid py-[7px] pl-10 pr-[38px] bg-white shadow-md rounded hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border">
             Register
