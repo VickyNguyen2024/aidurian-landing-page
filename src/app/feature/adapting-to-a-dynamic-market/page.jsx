@@ -42,6 +42,13 @@ const adaptingToADynamicMarketData = [
   },
 ];
 
+export const metadata = {
+  title:
+    "Adapting To A Dynamic Market | AI Durian | International Durian Association",
+  description:
+    "Adapting To A Dynamic Market | AI Durian | International Durian Association",
+};
+
 export default function AdaptingToADynamicMarket() {
   return (
     <div className="feature-block">

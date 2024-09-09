@@ -43,6 +43,11 @@ const aboutIDAData = [
   },
 ];
 
+export const metadata = {
+  title: "About IDA | AI Durian | International Durian Association",
+  description: "About IDA | AI Durian | International Durian Association",
+};
+
 export default function AboutUs() {
   return (
     <div className="feature-block">

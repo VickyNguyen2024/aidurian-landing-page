@@ -40,6 +40,11 @@ const qualityControlData = [
   },
 ];
 
+export const metadata = {
+  title: "Quality Control | AI Durian | International Durian Association",
+  description: "Quality Control | AI Durian | International Durian Association",
+};
+
 export default function QualityControl() {
   return (
     <div className="feature-block">

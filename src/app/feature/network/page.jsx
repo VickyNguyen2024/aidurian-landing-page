@@ -28,6 +28,11 @@ const networkData = [
   },
 ];
 
+export const metadata = {
+  title: "Network | AI Durian | International Durian Association",
+  description: "Network | AI Durian | International Durian Association",
+};
+
 export default function Network() {
   return (
     <div className="feature-block">

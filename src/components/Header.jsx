@@ -74,11 +74,10 @@ const DesktopSearchBar = () => {
       <div className="flex items-center justify-between py-2">
         <div>
           <Link href={"/"}>
-            <Image
+            <img
               src={"/images/aidurian-logo.png"}
               alt="aidurian-logo"
-              width="224"
-              height="78"
+              className="max-w-[224px]"
             />
           </Link>
         </div>
@@ -193,11 +192,15 @@ const MobileNavbar = () => {
   const t = useTranslations();
 
   return (
-    <div className="relative">
+    <div className="relative py-3">
       <div className="container">
         <div className="flex justify-between items-center">
           <Link href={"/"}>
-            <img src={"/images/aidurian-logo.png"} alt="aidurian-logo" />
+            <img
+              src={"/images/aidurian-logo.png"}
+              alt="aidurian-logo"
+              className="max-w-[200px]"
+            />
           </Link>
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (

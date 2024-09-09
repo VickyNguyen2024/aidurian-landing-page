@@ -38,6 +38,11 @@ const MembershipData = [
   },
 ];
 
+export const metadata = {
+  title: "Membership | AI Durian | International Durian Association",
+  description: "Membership | AI Durian | International Durian Association",
+};
+
 export default function Membership() {
   return (
     <div className="feature-block">

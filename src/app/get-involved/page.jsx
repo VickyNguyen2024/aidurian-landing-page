@@ -23,6 +23,11 @@ const getInvolvedData = {
   },
 };
 
+export const metadata = {
+  title: "Get Involved | AI Durian | International Durian Association",
+  description: "Get Involved | AI Durian | International Durian Association",
+};
+
 export default function GetInvolved() {
   return (
     <>
@@ -73,7 +78,9 @@ export default function GetInvolved() {
         </div>
 
         <div className="bg-[#FDC20E] p-4">
-          <p className="text-justify text-white">{getInvolvedData.conclusion.text}</p>
+          <p className="text-justify text-white">
+            {getInvolvedData.conclusion.text}
+          </p>
         </div>
       </div>
     </>

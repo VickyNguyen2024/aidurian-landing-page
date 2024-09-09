@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import ExploreTheReport from "@/components/ExploreTheReport";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -320,37 +321,7 @@ const FeatureSection = () => {
   );
 };
 
-const ExploreTheReport = () => {
-  const t = useTranslations();
 
-  return (
-    <div
-      className="min-h-[993px] flex flex-col justify-center items-center"
-      style={{
-        background: "url(/images/explore-the-report.png)",
-        objectFit: "cover",
-      }}
-    >
-      <div
-        className="lg:w-2/5 p-10"
-        style={{ backgroundColor: "rgba(255,255,255,0.9)" }}
-      >
-        <h1
-          className={`${playfairDisplay.className} font-medium text-3xl md:text-5xl leading-tight mb-5`}
-        >
-          {t("Banner3.title")}
-        </h1>
-        <p className="text-xl font-light mb-8">{t("Banner3.description")}</p>
-        <button
-          type="button"
-          className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
-        >
-          {t("Banner3.register")}
-        </button>
-      </div>
-    </div>
-  );
-};
 
 const ExploreSection = () => {
   const t = useTranslations();
@@ -371,7 +342,7 @@ const ExploreSection = () => {
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/users.svg"} alt="" />
               <Link
-                className="text-3xl text-white underline"
+                className="text-2xl text-white underline"
                 href={"/feature/about-us"}
               >
                 {t("Explore.1")}
@@ -380,7 +351,7 @@ const ExploreSection = () => {
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/hard-drive.svg"} alt="" />
               <Link
-                className="text-3xl text-white underline"
+                className="text-2xl text-white underline"
                 href={"/feature/resources-and-services"}
               >
                 {t("Explore.2")}
@@ -389,7 +360,7 @@ const ExploreSection = () => {
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/sliders.svg"} alt="" />
               <Link
-                className="text-3xl text-white underline"
+                className="text-2xl text-white underline"
                 href={"/feature/quality-control"}
               >
                 {t("Explore.3")}
@@ -398,7 +369,7 @@ const ExploreSection = () => {
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/user-check.svg"} alt="" />
               <Link
-                className="text-3xl text-white underline"
+                className="text-2xl text-white underline"
                 href={"/feature/ida-partners"}
               >
                 {t("Explore.4")}
@@ -407,7 +378,7 @@ const ExploreSection = () => {
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/user-plus.svg"} alt="" />
               <Link
-                className="text-3xl text-white underline"
+                className="text-2xl text-white underline"
                 href={"/feature/membership"}
               >
                 {t("Explore.5")}
@@ -416,7 +387,7 @@ const ExploreSection = () => {
             <div className="border-l-[3px] border-[#FFEC16] pl-5 flex items-center gap-6">
               <img src={"/icon/share-2.svg"} alt="" />
               <Link
-                className="text-3xl text-white underline"
+                className="text-2xl text-white underline"
                 href={"/feature/network"}
               >
                 {t("Explore.6")}

@@ -12,7 +12,8 @@ const roboto = Roboto({
 
 export const metadata = {
   title: "AI Durian | International Durian Association",
-  description: "AI Durian | International Durian Association",
+  description:
+    "The International Durian Association (IDA) is a global non-profit organization committed to promoting sustainable development and exceptional quality in the durian industry. With a mission to connect producers, exporters, and consumers worldwide, IDA creates a robust platform for collaboration, aiming to enhance product standards and add value for all partners involved.",
 };
 
 export default async function RootLayout({ children }) {

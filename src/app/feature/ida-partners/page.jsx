@@ -36,6 +36,11 @@ const IDAPartnersData = [
   },
 ];
 
+export const metadata = {
+  title: "IDA Partners | AI Durian | International Durian Association",
+  description: "IDA Partners | AI Durian | International Durian Association",
+};
+
 export default function IDAPartners() {
   return (
     <div className="feature-block">

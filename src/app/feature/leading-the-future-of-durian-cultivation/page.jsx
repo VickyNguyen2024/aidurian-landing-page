@@ -41,6 +41,13 @@ const leadingTheFutureOfDurianCultivationData = [
   },
 ];
 
+export const metadata = {
+  title:
+    "Leading The Future Of Durian Cultivation | AI Durian | International Durian Association",
+  description:
+    "Leading The Future Of Durian Cultivation | AI Durian | International Durian Association",
+};
+
 export default function LeadingTheFutureOfDurianCultivation() {
   return (
     <div className="feature-block">

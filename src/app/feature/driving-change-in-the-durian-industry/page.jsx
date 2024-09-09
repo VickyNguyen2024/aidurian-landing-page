@@ -37,6 +37,13 @@ const drivingChangeInTheDurianIndustryData = [
   },
 ];
 
+export const metadata = {
+  title:
+    "Driving Change In The Durian Industry | AI Durian | International Durian Association",
+  description:
+    "Driving Change In The Durian Industry | AI Durian | International Durian Association",
+};
+
 export default function DrivingChangeInTheDurianIndustry() {
   return (
     <div className="feature-block">

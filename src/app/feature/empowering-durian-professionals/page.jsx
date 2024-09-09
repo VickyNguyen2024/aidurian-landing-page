@@ -39,6 +39,12 @@ const empoweringDurianProfessionalsData = [
   },
 ];
 
+export const metadata = {
+  title: "Empowering Durian Professionals | AI Durian | International Durian Association",
+  description: "Empowering Durian Professionals | AI Durian | International Durian Association",
+};
+
+
 export default function EmpoweringDurianProfessionals() {
   return (
     <div className="feature-block">

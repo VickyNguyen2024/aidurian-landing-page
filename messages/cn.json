@@ -77,13 +77,7 @@
   },
   "Footer": {
     "description": "This site is sponsored by the International Durian Association, the global representative organization for the durian industry, committed to promoting innovation, ensuring quality, and fostering sustainable development. The Association was founded by leading experts and reputable organizations within the durian industry.",
-    "about": "About",
-    "term": "Terms & Conditions",
-    "accessibility": "Accessibility",
-    "privacy": "Privacy Policy",
-    "contact": "Contact",
-    "help": "Help",
-    "site-map": "Site Map",
-    "watermark": "CA Do Not Sell or Share My Personal Information"
+    "address1": "Global Headquarter",
+    "address2": "7500A Beach Road #04-307, The Plaza Singapore 199591"
   }
 }

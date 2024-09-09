@@ -34,6 +34,13 @@ const resourcesAndServicesData = [
   },
 ];
 
+export const metadata = {
+  title:
+    "Resources And Services | AI Durian | International Durian Association",
+  description:
+    "Resources And Services | AI Durian | International Durian Association",
+};
+
 export default function ResourcesAndServices() {
   return (
     <div className="feature-block">
