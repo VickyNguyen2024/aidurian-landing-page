@@ -6,6 +6,7 @@ import { LoaderCircle } from "lucide-react";
 import { useRef, useState } from "react";
 
 export default function Register() {
+
   const [isSendingOrder, setIsSendingOrder] = useState(false);
   const [user, setUser] = useState({
     user_name: "",

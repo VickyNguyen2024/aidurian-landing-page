@@ -1,9 +1,9 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import LayoutWrapper from "@/components/LayoutWrapper";
+import { ProgressBar, ProgressBarProvider } from "react-transition-progress";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -24,9 +24,13 @@ export default async function RootLayout({ children }) {
     <html lang={locale}>
       <body className={roboto.className}>
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
+          <ProgressBarProvider>
+            <ProgressBar className="fixed h-2 shadow-lg shadow-sky-500/20 bg-[#FCC009] top-0" />
+            <LayoutWrapper>
+              {/* I.e. using Tailwind CSS to show the progress bar with custom styling */}
+              {children}
+            </LayoutWrapper>
+          </ProgressBarProvider>
         </NextIntlClientProvider>
       </body>
     </html>

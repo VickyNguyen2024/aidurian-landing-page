@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "react-transition-progress/next";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <>
+    <div>
       <div className="bg-black py-10 border-b-2 border-b-[#FEC216]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -26,7 +26,7 @@ export default function Footer() {
                 <p className="text-white">{t("Footer.address2")}</p>
               </div>
             </div>
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4 lg:justify-center">
               <Link
                 className={`link ${
                   pathname === "/"
@@ -47,7 +47,7 @@ export default function Footer() {
               >
                 {t("Navbar.membership")}
               </Link>
-              <Link
+              {/* <Link
                 className={`link ${
                   pathname === "/news"
                     ? "font-bold text-white cursor-default leading-none border-b-[1px] border-white"
@@ -56,8 +56,8 @@ export default function Footer() {
                 href={"/news"}
               >
                 {t("Navbar.news")}
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 className={`link ${
                   pathname === "/upcoming-event"
                     ? "font-bold text-white cursor-default leading-none border-b-[1px] border-white"
@@ -66,7 +66,7 @@ export default function Footer() {
                 href={"/upcoming-event"}
               >
                 {t("Navbar.upcoming-event")}
-              </Link>
+              </Link> */}
               <Link
                 className={`link ${
                   pathname === "/get-involved"
@@ -77,7 +77,7 @@ export default function Footer() {
               >
                 {t("Navbar.get-involved")}
               </Link>
-              <Link
+              {/* <Link
                 className={`link ${
                   pathname === "/local-sites"
                     ? "font-bold text-white cursor-default leading-none border-b-[1px] border-white"
@@ -86,7 +86,7 @@ export default function Footer() {
                 href={"/local-sites"}
               >
                 {t("Navbar.local-sites")}
-              </Link>
+              </Link> */}
               <Link
                 className={`link ${
                   pathname === "/contact"
@@ -101,12 +101,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-black py-4">
+      <div className="bg-[#FBF7EB] py-4">
         <div className="container">
-          <p className="text-center text-white">{t("Footer.description")}</p>
+          <p className="text-center">{t("Footer.description")}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
-import Link from "next/link";
+import { Link } from "react-transition-progress/next";
 import { useTranslations } from "next-intl";
 import ExploreTheReport from "@/components/ExploreTheReport";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -13,7 +14,8 @@ export default function Home() {
   return (
     <>
       <TopBanner />
-      <IntroductionVideo />
+      {/* <IntroductionVideo /> */}
+      <VideoPlayer />
       <GoalSection />
       <InformationSection />
       <BecomeAMember />

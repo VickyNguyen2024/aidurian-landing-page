@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "react-transition-progress/next";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -22,7 +22,7 @@ export default function Header() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
 
   return (
-    <>
+    <div>
       <TopBar />
       {isDesktop && (
         <>
@@ -31,7 +31,7 @@ export default function Header() {
         </>
       )}
       {!isDesktop && <MobileNavbar />}
-    </>
+    </div>
   );
 }
 
@@ -47,7 +47,7 @@ const TopBar = () => {
 
   return (
     <div className="h-[40px] bg-[#008481] flex flex-row-reverse items-center">
-      <div className="container">
+      {/* <div className="container">
         <div className="flex flex-row-reverse items-center">
           <Select defaultValue={locale} onValueChange={onChange}>
             <SelectTrigger className="w-[100px] h-[30px] outline-none">
@@ -61,7 +61,7 @@ const TopBar = () => {
             </SelectContent>
           </Select>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -93,13 +93,13 @@ const DesktopSearchBar = () => {
               Register
             </button> */}
           </div>
-          <div>
+          {/* <div>
             <input
               className="border-[1px] w-[531px] border-solid border-black py-2 px-4 rounded"
               placeholder={t("Navbar.search-box")}
               type="text"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@ const DestopNavbar = () => {
       >
         {t("Navbar.membership")}
       </Link>
-      <Link
+      {/* <Link
         className={`link ${
           pathname === "/news"
             ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
@@ -141,8 +141,8 @@ const DestopNavbar = () => {
         href={"/news"}
       >
         {t("Navbar.news")}
-      </Link>
-      <Link
+      </Link> */}
+      {/* <Link
         className={`link ${
           pathname === "/upcoming-event"
             ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
@@ -151,7 +151,7 @@ const DestopNavbar = () => {
         href={"/upcoming-event"}
       >
         {t("Navbar.upcoming-event")}
-      </Link>
+      </Link> */}
       <Link
         className={`link ${
           pathname === "/get-involved"
@@ -162,7 +162,7 @@ const DestopNavbar = () => {
       >
         {t("Navbar.get-involved")}
       </Link>
-      <Link
+      {/* <Link
         className={`link ${
           pathname === "/local-sites"
             ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
@@ -171,7 +171,7 @@ const DestopNavbar = () => {
         href={"/local-sites"}
       >
         {t("Navbar.local-sites")}
-      </Link>
+      </Link> */}
       <Link
         className={`link ${
           pathname === "/contact"
@@ -216,13 +216,13 @@ const MobileNavbar = () => {
           isOpen ? "block" : "hidden"
         } mobile-nav p-2 absolute w-full bg-white shadow-2xl`}
       >
-        <div>
+        {/* <div>
           <input
             className="border-[1px] w-full border-solid border-black py-1 px-4 rounded mb-4"
             placeholder="Search Aidurian"
             type="text"
           />
-        </div>
+        </div> */}
         <nav className="flex flex-col justify-center items-center gap-4 mb-4">
           <Link
             className={`link ${
@@ -246,7 +246,7 @@ const MobileNavbar = () => {
           >
             {t("Navbar.membership")}
           </Link>
-          <Link
+          {/* <Link
             className={`link ${
               pathname === "/news"
                 ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
@@ -256,8 +256,8 @@ const MobileNavbar = () => {
             onClick={() => setIsOpen(false)}
           >
             {t("Navbar.news")}
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             className={`link ${
               pathname === "/upcoming-event"
                 ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
@@ -267,7 +267,7 @@ const MobileNavbar = () => {
             onClick={() => setIsOpen(false)}
           >
             {t("Navbar.upcoming-event")}
-          </Link>
+          </Link> */}
           <Link
             className={`link ${
               pathname === "/get-involved"
@@ -279,7 +279,7 @@ const MobileNavbar = () => {
           >
             {t("Navbar.get-involved")}
           </Link>
-          <Link
+          {/* <Link
             className={`link ${
               pathname === "/local-sites"
                 ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
@@ -289,7 +289,7 @@ const MobileNavbar = () => {
             onClick={() => setIsOpen(false)}
           >
             {t("Navbar.local-sites")}
-          </Link>
+          </Link> */}
           <Link
             className={`link ${
               pathname === "/contact"

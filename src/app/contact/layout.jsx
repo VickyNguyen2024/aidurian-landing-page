@@ -2,11 +2,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 export const metadata = {
-  title: "Register | AI Durian | International Durian Association",
-  description: "Register | AI Durian | International Durian Association",
+  title: "Contact | AI Durian | International Durian Association",
+  description: "Contact | AI Durian | International Durian Association",
 };
 
-const RegisterLayout = ({ children }) => {
+const ContactLayout = ({ children }) => {
   return (
     <div className="lg:min-h-screen lg:flex lg:flex-col lg:justify-between">
       <Header />
@@ -16,4 +16,4 @@ const RegisterLayout = ({ children }) => {
   );
 };
 
-export default RegisterLayout;
+export default ContactLayout;
