@@ -31,15 +31,14 @@ const TopBanner = () => {
 
   return (
     <div className="flex flex-row-reverse items-center bg-[#FFE281]">
-      <div className="relative hidden md:block min-h-[656px] w-1/2 flex-1">
-        <Image
+      <div className="relative hidden md:flex justify-center min-h-[656px] w-1/2 flex-1">
+        <img
           src={"/images/top-banner.png"}
           alt="aidurian-top-banner"
-          fill
-          sizes="100vw"
+          className="w-screen min-h-full"
         />
       </div>
-      <div className="flex-1 md:pl-[400px] p-4 md:p-0">
+      <div className="flex-1 xl:pl-[400px] p-4 md:p-0">
         <h1 className="bg-[#FABF03] text-lg text-white px-5 rounded max-w-fit mb-2">
           {t("Banner.welcome-to-ida")}
         </h1>

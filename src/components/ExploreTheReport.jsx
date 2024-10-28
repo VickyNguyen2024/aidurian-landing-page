@@ -21,13 +21,31 @@ const ExploreTheReport = () => {
         ]}
       >
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index}>
-              <div>
-                <img src="/images/explore-the-report.png" alt="" />
-              </div>
-            </CarouselItem>
-          ))}
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-1.jpg" alt="" className="w-full block mx-auto" />
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-2.jpg" alt="" className="w-full block mx-auto" />
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-3.jpg" alt="" className="w-full block mx-auto" />
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-4.jpg" alt="" className="w-full block mx-auto" />
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-5.jpg" alt="" className="w-full block mx-auto" />
+            </div>
+          </CarouselItem>
         </CarouselContent>
       </Carousel>
     </div>
