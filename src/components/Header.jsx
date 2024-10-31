@@ -85,7 +85,7 @@ const DesktopSearchBar = () => {
           <div className="flex items-center gap-3">
             <Link
               href={"/register"}
-              className="flex-1 flex items-center justify-center text-white cursor-pointer border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#008481] shadow-md rounded whitespace-nowrap hover:opacity-60 transition-all hover:border-[1px] hover:border-solid hover:box-border"
+              className="flex-1 flex items-center justify-center text-white cursor-pointer border-[1px] border-solid py-[7px] pl-12 pr-[46px] bg-[#008481] shadow-md rounded whitespace-nowrap hover:opacity-85 transition-all hover:border-[1px] hover:border-solid hover:box-border"
             >
               {t("Navbar.register")}
             </Link>
@@ -214,7 +214,7 @@ const MobileNavbar = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } mobile-nav p-2 absolute w-full bg-white shadow-2xl`}
+        } mobile-nav p-2 absolute w-full bg-white shadow-2xl z-10`}
       >
         {/* <div>
           <input

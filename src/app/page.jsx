@@ -49,12 +49,12 @@ const TopBanner = () => {
         <h2 className="text-lg font-medium text-balance mb-6">
           {t("Banner.description")}
         </h2>
-        <button
-          type="button"
-          className="text-white cursor-pointer font-bold text-lg py-2 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
+        <Link
+          href={`/register`}
+          className="text-white cursor-pointer font-bold text-lg py-2 pl-12 pr-[46px] bg-[#008481] hover:opacity-85 shadow-md rounded transition-all"
         >
           {t("Banner.register")}
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -243,12 +243,12 @@ const BecomeAMember = () => {
           {t("Banner2.title")}
         </h1>
         <p className="text-xl font-light mb-8">{t("Banner2.description")}</p>
-        <button
-          type="button"
-          className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#008481] shadow-md rounded flex flex-row items-start justify-start whitespace-nowrap transition-all"
+        <Link
+          href={`/register`}
+          className="text-white cursor-pointer font-bold text-lg py-3 pl-12 pr-[46px] bg-[#008481] shadow-md rounded hover:opacity-85 whitespace-nowrap transition-all"
         >
           {t("Banner2.register")}
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -313,16 +313,19 @@ const FeatureSection = () => {
               </div>
             </div>
           </div>
-          <button className="border-[1px] border-[#008481] bg-white text-[#008481] font-medium block mx-auto rounded py-2 px-4">
-            {t("SpecializedSupport.register")}
-          </button>
+          <div className="flex justify-center">
+            <Link
+              href={`/register`}
+              className="border-[1px] border-[#008481] bg-white transition-all text-[#008481] hover:bg-[#008481] hover:text-white font-medium mx-auto rounded py-2 px-4"
+            >
+              {t("SpecializedSupport.register")}
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
-
 
 const ExploreSection = () => {
   const t = useTranslations();

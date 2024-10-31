@@ -11,7 +11,7 @@ import { LoaderCircle } from "lucide-react";
 export default function Contact() {
   return (
     <div className="container py-10">
-      <h1 className="text-center text-2xl text-[#468448] font-semibold">
+      <h1 className="text-center text-2xl text-teal-700 font-semibold">
         Contact us
       </h1>
       <h1 className="text-center text-xl md:text-4xl text-black font-medium mb-10">
@@ -175,7 +175,6 @@ function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            defaultCountry="US"
             placeholder="+1 (555) 000-0000"
           />
         </div>
@@ -194,6 +193,7 @@ function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Leave us a message..."
+            className="focus-visible:ring-[0] focus-visible:border-[#FABF03] focus-visible:border-2"
           />
         </div>
 
