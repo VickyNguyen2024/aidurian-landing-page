@@ -132,6 +132,16 @@ const DestopNavbar = () => {
       >
         {t("Navbar.membership")}
       </Link>
+      <Link
+        className={`link ${
+          pathname === "/news-and-events"
+            ? "font-bold text-[#008481] cursor-default border-b-[1px] border-[#008481] leading-none"
+            : "hover:opacity-60 transition-all"
+        }`}
+        href={"/news-and-events"}
+      >
+        News/Events
+      </Link>
       {/* <Link
         className={`link ${
           pathname === "/news"
