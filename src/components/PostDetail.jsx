@@ -36,6 +36,7 @@ export default function PostDetail({ post }) {
     <>
       {post.bannerImage && <SectionBlockHeader
         height="600"
+        mb="5"
         url={`url(${post.bannerImage})`}
       />}
       <div className="container md:max-w-[860px] mb-20 pt-10">
@@ -45,10 +46,10 @@ export default function PostDetail({ post }) {
             News Events/<span className="text-[#008481]">{post.title}</span>
           </span>
         </p>
-        <h1 className="text-center text-3xl md:text-xl uppercase font-bold mb-4">
+        <h1 className="text-center text-xl uppercase font-bold mb-4">
           {post.title}
         </h1>
-        <div className="w-[247px] border-t-4 border-[#01827D] mt-2 mx-auto mb-14"></div>
+        <div className="w-[247px] border-t-4 border-[#01827D] mt-2 mx-auto mb-10"></div>
         <div>
             {post.description}
         </div>

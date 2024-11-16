@@ -2,7 +2,7 @@ export const newsAndEvents = [
   {
     id: 1,
     title:
-      "Standards Lead, Digital Empowerment, and Innovative Collaboration The First International Durian Industry Summit Concludes Successfully",
+      "Standards Lead, Digital Empowerment, and Innovative Collaboration - The First International Durian Industry Summit Concludes Successfully",
     thumbnail: "/images/post-1-thumbnail.png",
     href: "/news-and-events/1",
     bannerImage: "/images/post-1-banner.png",
@@ -125,38 +125,39 @@ export const newsAndEvents = [
       "Digital Technology Leading the Future: International Durian Industry Summit Forum Focuses on Digitalization in Cultivation",
     thumbnail: "/images/post-2-thumbnail.png",
     href: "/news-and-events/2",
-    shortDescription: 'The First International Durian Industry Summit Concludes Successfully...',
+    shortDescription:
+      "The First International Durian Industry Summit Concludes Successfully...",
     description: (
       <>
         <p className="text-justify mb-2">
-          November 7, 2024 | Shanghai The first International Durian Industry
-          Innovation Development Summit Forum successfully took place on the
-          afternoon of the 6th, as part of the 7th China International Import
-          Expo. Hosted by the International Durian Association, the forum
-          utilized the global expo platform to draw government agencies and
-          business representatives from durian-producing countries worldwide,
-          establishing a network of resources within the durian industry and
-          supporting resource optimization and industry model upgrades.
-          Digitalization, Intelligence, and Standardization in Focus In his
-          address, Liu Feng, General Secretary of the International Durian
-          Association, emphasized that as the durian market continues to grow
-          and smart agriculture rapidly advances, the durian industry is moving
-          toward digitalization, intelligence, and standardization. This forum
-          centered on technological innovation, delving into themes of
-          digitalization, standardization, and intelligent practices in the
-          durian sector. Assistant Minister Philip Young from the Philippines
-          Department of Agriculture and Nguyen Thi Lan Huong from the Vietnam
-          Agriculture Digital Association expressed high expectations for
-          applying digital technology to the durian industry. Both officials
-          highlighted the desire for enhanced cooperation to establish digital
-          standards that can drive the industry’s advancement. Leadership in
-          Digital Planting Standards The association appointed Terry Lin, CEO of
-          Malaysia’s Agrionex, as Chairman of the Digital Planting Standards
-          Committee. Mr Lin is tasked with advancing digitalization,
-          intelligence, and standardization within the sector. He advocated for
-          “heritage digital planting” by utilizing data collection and analysis
-          to optimize fertilization, irrigation, and pest control, training the
-          “next generation of masters” through AI technology. He emphasized that
+          Shanghai, Nov. 6, 2024 - Shanghai The first International Durian
+          Industry Innovation Development Summit Forum successfully took place,
+          as part of the 7th China International Import Expo. Hosted by the
+          International Durian Association, the forum utilized the global expo
+          platform to draw government agencies and business representatives from
+          durian-producing countries worldwide, establishing a network of
+          resources within the durian industry and supporting resource
+          optimization and industry model upgrades. Digitalization,
+          Intelligence, and Standardization in Focus In his address, Liu Feng,
+          General Secretary of the International Durian Association, emphasized
+          that as the durian market continues to grow and smart agriculture
+          rapidly advances, the durian industry is moving toward digitalization,
+          intelligence, and standardization. This forum centered on
+          technological innovation, delving into themes of digitalization,
+          standardization, and intelligent practices in the durian sector.
+          Assistant Minister Philip Young from the Philippines Department of
+          Agriculture and Nguyen Thi Lan Huong from the Vietnam Agriculture
+          Digital Association expressed high expectations for applying digital
+          technology to the durian industry. Both officials highlighted the
+          desire for enhanced cooperation to establish digital standards that
+          can drive the industry’s advancement. Leadership in Digital Planting
+          Standards The association appointed Terry Lin, CEO of Malaysia’s
+          Agrionex, as Chairman of the Digital Planting Standards Committee. Mr
+          Lin is tasked with advancing digitalization, intelligence, and
+          standardization within the sector. He advocated for “heritage digital
+          planting” by utilizing data collection and analysis to optimize
+          fertilization, irrigation, and pest control, training the “next
+          generation of masters” through AI technology. He emphasized that
           digitalization and intelligence are foundational to standardization,
           requiring unified standards for efficient collaboration. Strategic
           Partnerships for Digitalization During the forum, Malaysia’s LKE and
