@@ -130,7 +130,7 @@ export const newsAndEvents = [
     description: (
       <>
         <p className="text-justify mb-2">
-          Shanghai, Nov. 6, 2024 - Shanghai The first International Durian
+          Shanghai, Nov. 6, 2024 - The first International Durian
           Industry Innovation Development Summit Forum successfully took place,
           as part of the 7th China International Import Expo. Hosted by the
           International Durian Association, the forum utilized the global expo
