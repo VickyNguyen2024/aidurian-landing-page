@@ -130,9 +130,9 @@ export const newsAndEvents = [
     description: (
       <>
         <p className="text-justify mb-2">
-          Shanghai, Nov. 6, 2024 - The first International Durian
-          Industry Innovation Development Summit Forum successfully took place,
-          as part of the 7th China International Import Expo. Hosted by the
+          Shanghai, Nov. 6, 2024 - The first International Durian Industry
+          Innovation Development Summit Forum successfully took place, as part
+          of the 7th China International Import Expo. Hosted by the
           International Durian Association, the forum utilized the global expo
           platform to draw government agencies and business representatives from
           durian-producing countries worldwide, establishing a network of
@@ -145,6 +145,9 @@ export const newsAndEvents = [
           intelligence, and standardization. This forum centered on
           technological innovation, delving into themes of digitalization,
           standardization, and intelligent practices in the durian sector.
+        </p>
+        <img src="/images/post-2-images-1" alt="" />
+        <p className="text-justify mb-2">
           Assistant Minister Philip Young from the Philippines Department of
           Agriculture and Nguyen Thi Lan Huong from the Vietnam Agriculture
           Digital Association expressed high expectations for applying digital
@@ -159,17 +162,23 @@ export const newsAndEvents = [
           fertilization, irrigation, and pest control, training the “next
           generation of masters” through AI technology. He emphasized that
           digitalization and intelligence are foundational to standardization,
-          requiring unified standards for efficient collaboration. Strategic
-          Partnerships for Digitalization During the forum, Malaysia’s LKE and
-          Agrionex signed a strategic cooperation agreement to collaborate on
-          developing digital standards. As a leader in smart cultivation
-          solutions, Agrionex aims to assist durian orchards in reducing costs,
-          improving efficiency, and enhancing the industry’s interconnectedness
-          through digitalization. The association also announced the launch of a
-          “Digital Planting Committee” and the start of drafting “digital
-          planting standards” to support the healthy growth of the global durian
-          industry.
+          requiring unified standards for efficient collaboration.
         </p>
+
+        <img src="/images/post-2-images-2" alt="" />
+        <p className="text-justify mb-2">
+          Strategic Partnerships for Digitalization During the forum, Malaysia’s
+          LKE and Agrionex signed a strategic cooperation agreement to
+          collaborate on developing digital standards. As a leader in smart
+          cultivation solutions, Agrionex aims to assist durian orchards in
+          reducing costs, improving efficiency, and enhancing the industry’s
+          interconnectedness through digitalization. The association also
+          announced the launch of a “Digital Planting Committee” and the start
+          of drafting “digital planting standards” to support the healthy growth
+          of the global durian industry.
+        </p>
+
+        <img src="/images/post-2-images-3" alt="" />
       </>
     ),
     date: "November 7, 2024 | Shanghai",
