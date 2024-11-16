@@ -146,7 +146,7 @@ export const newsAndEvents = [
           technological innovation, delving into themes of digitalization,
           standardization, and intelligent practices in the durian sector.
         </p>
-        <img src="/images/post-2-images-1" alt="" />
+        <img src="/images/post-2-images-1.png" className="block mx-auto mb-2" alt="" />
         <p className="text-justify mb-2">
           Assistant Minister Philip Young from the Philippines Department of
           Agriculture and Nguyen Thi Lan Huong from the Vietnam Agriculture
@@ -165,7 +165,7 @@ export const newsAndEvents = [
           requiring unified standards for efficient collaboration.
         </p>
 
-        <img src="/images/post-2-images-2" alt="" />
+        <img src="/images/post-2-images-2.png" className="block mx-auto mb-2" alt="" />
         <p className="text-justify mb-2">
           Strategic Partnerships for Digitalization During the forum, Malaysia’s
           LKE and Agrionex signed a strategic cooperation agreement to
@@ -178,7 +178,7 @@ export const newsAndEvents = [
           of the global durian industry.
         </p>
 
-        <img src="/images/post-2-images-3" alt="" />
+        <img src="/images/post-2-images-3.png" className="block mx-auto mb-2" alt="" />
       </>
     ),
     date: "November 7, 2024 | Shanghai",
