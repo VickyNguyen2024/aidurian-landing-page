@@ -20,30 +20,50 @@ const ExploreTheReport = () => {
           }),
         ]}
       >
-        <CarouselContent>
+        <CarouselContent className="">
           <CarouselItem>
             <div>
-              <img src="/images/carousel-1.jpg" alt="" className="w-full block mx-auto" />
+              <img src="/images/carousel-1.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
             </div>
           </CarouselItem>
           <CarouselItem>
             <div>
-              <img src="/images/carousel-2.jpg" alt="" className="w-full block mx-auto" />
+              <img src="/images/carousel-2.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
             </div>
           </CarouselItem>
           <CarouselItem>
             <div>
-              <img src="/images/carousel-3.jpg" alt="" className="w-full block mx-auto" />
+              <img src="/images/carousel-3.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
             </div>
           </CarouselItem>
           <CarouselItem>
             <div>
-              <img src="/images/carousel-4.jpg" alt="" className="w-full block mx-auto" />
+              <img src="/images/carousel-4.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
             </div>
           </CarouselItem>
           <CarouselItem>
             <div>
-              <img src="/images/carousel-5.jpg" alt="" className="w-full block mx-auto" />
+              <img src="/images/carousel-5.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-6.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-7.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-8.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div>
+              <img src="/images/carousel-9.jpg" alt="" className="w-full block mx-auto object-cover lg:max-h-[700px] max-h-[200px]" />
             </div>
           </CarouselItem>
         </CarouselContent>

@@ -137,48 +137,72 @@ export const newsAndEvents = [
           platform to draw government agencies and business representatives from
           durian-producing countries worldwide, establishing a network of
           resources within the durian industry and supporting resource
-          optimization and industry model upgrades. Digitalization,
-          Intelligence, and Standardization in Focus In his address, Liu Feng,
-          General Secretary of the International Durian Association, emphasized
-          that as the durian market continues to grow and smart agriculture
-          rapidly advances, the durian industry is moving toward digitalization,
-          intelligence, and standardization. This forum centered on
-          technological innovation, delving into themes of digitalization,
-          standardization, and intelligent practices in the durian sector.
+          optimization and industry model upgrades.
         </p>
-        <img src="/images/post-2-images-1.png" className="block mx-auto mb-2" alt="" />
+        <p className="text-center font-medium my-2">
+          Digitalization, Intelligence, and Standardization in Focus
+        </p>
+        <p>
+          In his address, Liu Feng, General Secretary of the International
+          Durian Association, emphasized that as the durian market continues to
+          grow and smart agriculture rapidly advances, the durian industry is
+          moving toward digitalization, intelligence, and standardization. This
+          forum centered on technological innovation, delving into themes of
+          digitalization, standardization, and intelligent practices in the
+          durian sector.
+        </p>
+        <img
+          src="/images/post-2-images-1.png"
+          className="block mx-auto"
+          alt=""
+        />
         <p className="text-justify mb-2">
           Assistant Minister Philip Young from the Philippines Department of
           Agriculture and Nguyen Thi Lan Huong from the Vietnam Agriculture
           Digital Association expressed high expectations for applying digital
           technology to the durian industry. Both officials highlighted the
           desire for enhanced cooperation to establish digital standards that
-          can drive the industry’s advancement. Leadership in Digital Planting
-          Standards The association appointed Terry Lin, CEO of Malaysia’s
-          Agrionex, as Chairman of the Digital Planting Standards Committee. Mr
-          Lin is tasked with advancing digitalization, intelligence, and
-          standardization within the sector. He advocated for “heritage digital
-          planting” by utilizing data collection and analysis to optimize
-          fertilization, irrigation, and pest control, training the “next
-          generation of masters” through AI technology. He emphasized that
-          digitalization and intelligence are foundational to standardization,
-          requiring unified standards for efficient collaboration.
+          can drive the industry’s advancement.
+        </p>
+        <p className="text-center font-medium my-2">
+          Leadership in Digital Planting Standards
+        </p>
+        <p>
+          The association appointed Terry Lin, CEO of Malaysia’s Agrionex, as
+          Chairman of the Digital Planting Standards Committee. Mr Lin is tasked
+          with advancing digitalization, intelligence, and standardization
+          within the sector. He advocated for “heritage digital planting” by
+          utilizing data collection and analysis to optimize fertilization,
+          irrigation, and pest control, training the “next generation of
+          masters” through AI technology. He emphasized that digitalization and
+          intelligence are foundational to standardization, requiring unified
+          standards for efficient collaboration.
         </p>
 
-        <img src="/images/post-2-images-2.png" className="block mx-auto mb-2" alt="" />
+        <img
+          src="/images/post-2-images-2.png"
+          className="block mx-auto"
+          alt=""
+        />
+        <p className="text-center font-medium my-2">
+          Strategic Partnerships for Digitalization
+        </p>
         <p className="text-justify mb-2">
-          Strategic Partnerships for Digitalization During the forum, Malaysia’s
-          LKE and Agrionex signed a strategic cooperation agreement to
-          collaborate on developing digital standards. As a leader in smart
-          cultivation solutions, Agrionex aims to assist durian orchards in
-          reducing costs, improving efficiency, and enhancing the industry’s
-          interconnectedness through digitalization. The association also
-          announced the launch of a “Digital Planting Committee” and the start
-          of drafting “digital planting standards” to support the healthy growth
-          of the global durian industry.
+          During the forum, Malaysia’s LKE and Agrionex signed a strategic
+          cooperation agreement to collaborate on developing digital standards.
+          As a leader in smart cultivation solutions, Agrionex aims to assist
+          durian orchards in reducing costs, improving efficiency, and enhancing
+          the industry’s interconnectedness through digitalization. The
+          association also announced the launch of a “Digital Planting
+          Committee” and the start of drafting “digital planting standards” to
+          support the healthy growth of the global durian industry.
         </p>
 
-        <img src="/images/post-2-images-3.png" className="block mx-auto mb-2" alt="" />
+        <img
+          src="/images/post-2-images-3.png"
+          className="block mx-auto mb-2"
+          alt=""
+        />
       </>
     ),
     date: "November 7, 2024 | Shanghai",
